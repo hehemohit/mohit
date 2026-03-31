@@ -51,7 +51,7 @@ export const WorksSection = () => {
   return (
     <section
       id="projects"
-      className="relative min-h-screen px-12 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
+      className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
     >
       {/* Background Watermark 03 */}
       <div className="absolute bottom-[-4%] right-[-5%] leading-none select-none pointer-events-none z-0 overflow-hidden opacity-5">

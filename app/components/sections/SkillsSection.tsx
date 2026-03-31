@@ -56,7 +56,7 @@ function CategoryBlock({ category, index }: { category: any; index: number }) {
 export const SkillsSection = () => (
   <section
     id="skills"
-    className="relative min-h-screen px-12 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
+    className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
   >
     {/* Header */}
     <div className="mb-24 max-w-7xl mx-auto w-full">

@@ -14,7 +14,7 @@ const stats = [
 export const AboutSection = () => (
   <section
     id="philosophy"
-    className="relative min-h-screen flex items-center px-12 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
+    className="relative min-h-screen flex items-center px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
   >
     {/* Background Watermark 01 */}
     <div className="absolute bottom-[-10%] right-[-5%] md:right-[-5%] leading-none select-none pointer-events-none z-0 overflow-hidden opacity-5">

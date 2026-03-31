@@ -19,8 +19,6 @@ export default function Home() {
       <Sidebar />
 
       <HeroSection />
-      <AboutSection />
-      <WorksSection />
       <ExperienceSection />
       <SkillsSection />
       <EducationSection />

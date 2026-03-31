@@ -19,7 +19,7 @@ const education = [
 export const EducationSection = () => (
   <section
     id="education"
-    className="relative min-h-screen px-12 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
+    className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
   >
     {/* Header */}
     <div className="mb-24 max-w-7xl mx-auto w-full">
@@ -45,7 +45,7 @@ export const EducationSection = () => (
               className="group flex flex-col md:flex-row relative"
             >
               {/* Left side: Dates */}
-              <div className="md:w-[120px] md:flex-shrink-0 mb-3 md:mb-0">
+              <div className="md:w-[120px] md:shrink-0 mb-3 md:mb-0">
                 <span className="font-label text-[11px] font-black tracking-widest text-outline uppercase">
                   {edu.dates}
                 </span>
@@ -71,7 +71,7 @@ export const EducationSection = () => (
                       key={j}
                       className="flex gap-4 font-body text-[16px] text-on-surface-variant leading-relaxed group/item"
                     >
-                      <span className="text-primary font-label font-black mt-1 flex-shrink-0 transition-transform group-hover/item:translate-x-1">
+                      <span className="text-primary font-label font-black mt-1 shrink-0 transition-transform group-hover/item:translate-x-1">
                         →
                       </span>
                       <span className="group-hover/item:text-on-surface transition-colors duration-300">

@@ -63,6 +63,7 @@ const TwitterIcon = ({ size = 18 }) => (
 
 export const Sidebar = () => {
     const [activeSectionId, setActiveSectionId] = useState("hero");
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -79,53 +80,93 @@ export const Sidebar = () => {
     const activeLabel =
         sections.find((s) => s.id === activeSectionId)?.label ?? "HOME";
 
-    return (
-        <aside
-            aria-label="Section navigation"
-            className="hidden lg:flex fixed left-0 top-0 bottom-0 w-20 z-40
-                       flex-col items-center py-10
-                       border-r border-white/5
-                       bg-black/80 backdrop-blur-md
-                       transition-colors duration-700"
-        >
-            <div
-                className="flex-none flex items-center justify-center mb-12 overflow-hidden"
-                style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", height: "120px" }}
-            >
-                <AnimatePresence mode="wait">
-                    <motion.span
-                        key={activeLabel}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="font-label text-[10px] font-black tracking-[0.5em] text-primary uppercase whitespace-nowrap"
-                    >
-                        {activeLabel}
-                    </motion.span>
-                </AnimatePresence>
-            </div>
+    const menuVariants = {
+        closed: { x: "100%", transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as any } },
+        open: { x: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as any } }
+    };
 
-            <nav className="flex-1 flex flex-col items-center justify-center gap-6">
-                {sections.map(({ id, label }) => {
-                    const isActive = activeSectionId === id;
-                    return (
-                        <a
-                            key={id}
-                            href={`#${id}`}
-                            aria-label={label}
-                            className="group relative flex items-center justify-center w-10 h-10"
+    return (
+        <>
+            {/* Desktop Sidebar */}
+            <aside
+                aria-label="Section navigation"
+                className="hidden lg:flex fixed left-0 top-0 bottom-0 w-20 z-40
+                           flex-col items-center py-10
+                           border-r border-white/5
+                           bg-black/80 backdrop-blur-md
+                           transition-colors duration-700"
+            >
+                <div
+                    className="flex-none flex items-center justify-center mb-12 overflow-hidden"
+                    style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", height: "120px" }}
+                >
+                    <AnimatePresence mode="wait">
+                        <motion.span
+                            key={activeLabel}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="font-label text-[10px] font-black tracking-[0.5em] text-primary uppercase whitespace-nowrap"
                         >
-                            <motion.div
-                                animate={{
-                                    scale: isActive ? 2 : 1,
-                                    backgroundColor: isActive ? "var(--primary)" : "transparent",
-                                    borderColor: isActive ? "var(--primary)" : "white",
-                                    opacity: isActive ? 1 : 0.2
-                                }}
-                                transition={{ duration: 0.3 }}
-                                className="w-1.5 h-1.5 rounded-full border border-white"
-                            />
+                            {activeLabel}
+                        </motion.span>
+                    </AnimatePresence>
+                </div>
+
+                <nav className="flex-1 flex flex-col items-center justify-center gap-6">
+                    {sections.map(({ id, label }) => {
+                        const isActive = activeSectionId === id;
+                        return (
+                            <a
+                                key={id}
+                                href={`#${id}`}
+                                aria-label={label}
+                                className="group relative flex items-center justify-center w-10 h-10"
+                            >
+                                <motion.div
+                                    animate={{
+                                        scale: isActive ? 2 : 1,
+                                        backgroundColor: isActive ? "var(--primary)" : "transparent",
+                                        borderColor: isActive ? "var(--primary)" : "white",
+                                        opacity: isActive ? 1 : 0.2
+                                    }}
+                                    transition={{ duration: 0.3 }}
+                                    className="w-1.5 h-1.5 rounded-full border border-white"
+                                />
+
+                                <span
+                                    className="pointer-events-none absolute left-full ml-5
+                                               font-label text-[10px] font-black tracking-[0.2em] uppercase
+                                               text-black bg-primary
+                                               px-3 py-1.5 rounded-sm whitespace-nowrap
+                                               opacity-0 group-hover:opacity-100
+                                               translate-x-2 group-hover:translate-x-0
+                                               transition-all duration-200"
+                                >
+                                    {label}
+                                </span>
+                            </a>
+                        );
+                    })}
+                </nav>
+
+                <div className="mt-auto flex flex-col items-center gap-6 pt-6">
+                    {[
+                        { href: "https://github.com/hehemohit", icon: GithubIcon, label: "GITHUB" },
+                        { href: "https://www.linkedin.com/in/mohitjangid", icon: LinkedinIcon, label: "LINKEDIN" },
+                        { href: "#", icon: TwitterIcon, label: "X / TWITTER" },
+                    ].map(({ href, icon: Icon, label }) => (
+                        <a
+                            key={label}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={label}
+                            className="group relative flex items-center justify-center w-10 h-10
+                                       text-white/30 hover:text-primary transition-colors duration-300"
+                        >
+                            <Icon size={18} />
 
                             <span
                                 className="pointer-events-none absolute left-full ml-5
@@ -139,41 +180,66 @@ export const Sidebar = () => {
                                 {label}
                             </span>
                         </a>
-                    );
-                })}
-            </nav>
+                    ))}
+                </div>
+            </aside>
 
-            <div className="mt-auto flex flex-col items-center gap-6 pt-6">
-                {[
-                    { href: "#", icon: GithubIcon, label: "GITHUB" },
-                    { href: "#", icon: LinkedinIcon, label: "LINKEDIN" },
-                    { href: "#", icon: TwitterIcon, label: "X / TWITTER" },
-                ].map(({ href, icon: Icon, label }) => (
-                    <a
-                        key={label}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={label}
-                        className="group relative flex items-center justify-center w-10 h-10
-                                   text-white/30 hover:text-primary transition-colors duration-300"
-                    >
-                        <Icon size={18} />
-
-                        <span
-                            className="pointer-events-none absolute left-full ml-5
-                                       font-label text-[10px] font-black tracking-[0.2em] uppercase
-                                       text-black bg-primary
-                                       px-3 py-1.5 rounded-sm whitespace-nowrap
-                                       opacity-0 group-hover:opacity-100
-                                       translate-x-2 group-hover:translate-x-0
-                                       transition-all duration-200"
-                        >
-                            {label}
-                        </span>
-                    </a>
-                ))}
+            {/* Mobile Header / Burger */}
+            <div className="lg:hidden fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-end pointer-events-none">
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="pointer-events-auto w-12 h-12 bg-black border border-white/10 flex items-center justify-center active:scale-95 transition-all"
+                >
+                    <div className="w-6 flex flex-col gap-1.5">
+                        <motion.span 
+                            animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 7 : 0 }}
+                            className="w-full h-0.5 bg-primary block" 
+                        />
+                        <motion.span 
+                            animate={{ opacity: isOpen ? 0 : 1 }}
+                            className="w-full h-0.5 bg-white block" 
+                        />
+                        <motion.span 
+                            animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -7 : 0 }}
+                            className="w-full h-0.5 bg-primary block" 
+                        />
+                    </div>
+                </button>
             </div>
-        </aside>
+
+            {/* Mobile Fullscreen Menu */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        variants={menuVariants}
+                        className="lg:hidden fixed inset-0 z-40 bg-black flex flex-col"
+                    >
+                        <div className="flex-1 flex flex-col justify-center px-10 gap-10">
+                            {sections.map((section, i) => (
+                                <motion.a
+                                    key={section.id}
+                                    href={`#${section.id}`}
+                                    onClick={() => setIsOpen(false)}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.1 * i }}
+                                    className="font-headline font-black text-5xl sm:text-6xl uppercase tracking-tighter text-white hover:text-primary transition-colors"
+                                >
+                                    {section.label}
+                                </motion.a>
+                            ))}
+                        </div>
+
+                        <div className="p-10 border-t border-white/5 flex gap-8">
+                            <a href="https://github.com/hehemohit" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">GITHUB</a>
+                            <a href="https://www.linkedin.com/in/mohitjangid" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">LINKEDIN</a>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
     );
 };
