@@ -3,6 +3,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, AlertCircle, FileText } from "lucide-react";
+import emailjs from "@emailjs/browser";
+
+// --- EmailJS Configuration (Using Next.js Environment Variables) ---
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || ""; 
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
 const GithubIcon = ({ size = 18 }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -37,28 +43,29 @@ export const ContactSection = () => {
         setSendError(false);
 
         try {
-            const formData = new FormData();
-            formData.append("access_key", "ab7eba12-b1e6-4cd9-afc9-23141d1acde8");
-            formData.append("name", formState.name);
-            formData.append("email", formState.email);
-            formData.append("message", formState.message);
-            formData.append("subject", `New Portfolio Contact: ${formState.name}`);
-            formData.append("from_name", "Portfolio Contact Form");
+            const templateParams = {
+                from_name: formState.name,
+                from_email: formState.email,
+                to_name: "Mohit", 
+                message: formState.message,
+                subject: `New Portfolio Contact: ${formState.name}`
+            };
 
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData,
-            });
+            const result = await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                templateParams,
+                EMAILJS_PUBLIC_KEY
+            );
 
-            const data = await response.json();
-
-            if (data.success) {
+            if (result.status === 200) {
                 setSubmitted(true);
                 setFormState({ name: "", email: "", message: "" });
             } else {
                 setSendError(true);
             }
-        } catch {
+        } catch (error) {
+            console.error("EmailJS Error:", error);
             setSendError(true);
         } finally {
             setIsSubmitting(false);
