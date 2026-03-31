@@ -51,7 +51,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
         y: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: index * 0.05 },
         scale: { duration: 0.5, ease: "easeInOut" },
       }}
-      className="group flex flex-col bg-black border-2 border-white/20 p-8 transition-all duration-500 shadow-[8px_8px_0_0_rgba(255,255,255,0.1)] hover:border-primary hover:shadow-[4px_4px_0_0_rgba(255,49,49,0.5)] hover:translate-x-[4px] hover:translate-y-[4px] h-full"
+      className="group flex flex-col bg-black border-2 border-white/20 p-8 transition-all duration-500 shadow-[8px_8px_0_0_rgba(255,255,255,0.1)] hover:border-white hover:shadow-[4px_4px_0_0_rgba(0,136,255,0.5)] hover:translate-x-[4px] hover:translate-y-[4px] h-full"
     >
       <div className="flex justify-between items-start mb-6">
         <span className="bg-white text-black font-label font-black text-[9px] uppercase tracking-[0.2em] px-3 py-1.5 flex items-center justify-center border border-white">
