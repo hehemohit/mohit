@@ -44,7 +44,7 @@ function CategoryBlock({ category, index }: { category: any; index: number }) {
       <h3 className="font-label text-[10px] sm:text-[11px] uppercase tracking-[0.4em] text-white font-black mb-4 md:mb-6">
         {category.label}
       </h3>
-      <div className="flex wrap gap-2 md:gap-3">
+      <div className="flex flex-wrap gap-2 md:gap-3">
         {category.skills.map((skill: string) => (
           <SkillTag key={skill} label={skill} />
         ))}
@@ -54,23 +54,23 @@ function CategoryBlock({ category, index }: { category: any; index: number }) {
 }
 
 export const SkillsSection = () => (
-  <section
-    id="skills"
-    className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
-  >
-    {/* Header */}
-    <div className="mb-24 max-w-7xl mx-auto w-full">
-      <h2 className="font-headline font-black text-[clamp(64px,18vw,160px)] tracking-tighter uppercase leading-[0.75] text-white">
-        SKILLS
-      </h2>
-    </div>
-
-    {/* Grid Layout */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 lg:gap-x-20 gap-y-16 max-w-7xl mx-auto w-full relative z-10">
-      {skillCategories.map((cat, i) => (
-        <CategoryBlock key={cat.label} category={cat} index={i} />
-      ))}
-    </div>
+    <section
+      id="skills"
+      className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
+    >
+      {/* Header */}
+      <div className="mb-16 md:mb-24 max-w-7xl mx-auto w-full">
+        <h2 className="font-headline font-black text-[clamp(48px,15vw,160px)] tracking-tighter uppercase leading-[0.75] text-white">
+          SKILLS
+        </h2>
+      </div>
+  
+      {/* Grid Layout */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 lg:gap-x-20 gap-y-12 md:gap-y-16 max-w-7xl mx-auto w-full relative z-10">
+        {skillCategories.map((cat, i) => (
+          <CategoryBlock key={cat.label} category={cat} index={i} />
+        ))}
+      </div>
 
     {/* Background Watermark 04 */}
     <div className="absolute bottom-[2%] right-[-5%] leading-none select-none pointer-events-none z-0 overflow-hidden opacity-5">

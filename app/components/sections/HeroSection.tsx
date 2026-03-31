@@ -5,12 +5,12 @@ import { motion } from 'framer-motion';
 export const HeroSection = () => (
   <section id="hero" className="min-h-screen flex items-center w-full px-6 sm:px-20 md:px-32 lg:px-48 py-24 overflow-hidden">
     <div className="max-w-7xl mx-auto w-full grid grid-cols-12 gap-8 items-end relative">
-      <div className="col-span-12 relative z-0">
+      <div className="col-span-12 relative z-0 flex justify-center w-full">
         <motion.h1 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-headline font-black text-6xl sm:text-7xl md:text-[10.5vw] whitespace-nowrap leading-[0.85] tracking-tighter text-primary uppercase text-center -translate-y-12 md:-translate-y-24"
+          className="font-headline font-black text-[clamp(24px,12vw,60px)] sm:text-[clamp(64px,15vw,180px)] md:text-[10.5vw] sm:whitespace-nowrap leading-[0.85] tracking-tighter text-primary uppercase text-center w-full -translate-y-6 sm:-translate-y-12 md:-translate-y-24"
         >
           MOHIT JANGID
         </motion.h1>
@@ -45,7 +45,7 @@ export const HeroSection = () => (
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-x-0 bottom-0 flex justify-center z-50 pointer-events-none"
+        className="absolute inset-x-0 bottom-0 hidden md:flex justify-center z-50 pointer-events-none"
       >
         <motion.div 
           animate={{ 
