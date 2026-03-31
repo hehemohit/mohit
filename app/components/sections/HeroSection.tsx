@@ -47,20 +47,30 @@ export const HeroSection = () => (
         transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-x-0 bottom-0 flex justify-center z-50 pointer-events-none"
       >
-        <div className="relative w-full max-w-2xl aspect-[4/5] mb-[-340px]">
+        <motion.div 
+          animate={{ 
+            y: [0, -15, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="relative w-full max-w-2xl aspect-[4/5] mb-[-340px]"
+        >
           <img 
             className="w-full h-full object-contain object-bottom" 
             alt="Mohit Jangid Portrait" 
             src="/hero-profile.png"
           />
-        </div>
+        </motion.div>
       </motion.div>
 
-      <div className="col-span-12 md:col-span-4 flex flex-col justify-end items-end text-right space-y-8 order-2 md:order-3 relative z-20">
+      <div className="col-span-12 md:col-span-4 md:col-start-9 flex flex-col justify-end items-end text-right space-y-8 order-2 md:order-3 relative z-20 translate-y-32">
         <motion.div 
           initial={{ width: 0 }}
           animate={{ width: "auto" }}
-          className="font-label uppercase tracking-[0.2em] text-primary text-xs flex items-center gap-4 overflow-hidden whitespace-nowrap"
+          className="font-label uppercase tracking-[0.2em] text-primary text-xs flex items-center justify-end gap-4 overflow-hidden whitespace-nowrap"
         >
           <div className="h-px w-12 bg-primary"></div>
           Digital Innovator
