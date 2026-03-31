@@ -16,7 +16,6 @@ export const Footer = () => (
         <a className="hover:text-primary transition-colors" href="#experience">Experience</a>
         <a className="hover:text-primary transition-colors" href="#education">Education</a>
         <a className="hover:text-primary transition-colors" href="#skills">Skills</a>
-        <a className="hover:text-primary transition-colors" href="#archive">Archive</a>
         <a className="hover:text-primary transition-colors" href="#contact">Contact</a>
       </div>
       <div className="w-full text-6xl md:text-[18vw] font-black text-primary opacity-5 uppercase font-headline tracking-tighter leading-none select-none pointer-events-none mb-8">

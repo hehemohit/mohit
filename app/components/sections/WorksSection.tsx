@@ -39,56 +39,7 @@ const projects = [
   }
 ];
 
-function ProjectCard({ project, index }: { project: any; index: number }) {
-  return (
-    <motion.div
-      layout="position"
-      initial={{ opacity: 0, y: 30, scale: 0.98 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: 20, scale: 0.98 }}
-      transition={{
-        opacity: { duration: 0.6, ease: "easeInOut" },
-        y: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: index * 0.05 },
-        scale: { duration: 0.5, ease: "easeInOut" },
-      }}
-      className="group flex flex-col bg-black border-2 border-white/20 p-8 transition-all duration-500 shadow-[8px_8px_0_0_rgba(255,255,255,0.1)] hover:border-white hover:shadow-[4px_4px_0_0_rgba(255,49,49,0.5)] hover:translate-x-[4px] hover:translate-y-[4px] h-full"
-    >
-      <div className="flex justify-between items-start mb-6">
-        <span className="bg-white text-black font-label font-black text-[9px] uppercase tracking-[0.2em] px-3 py-1.5 flex items-center justify-center border border-white">
-          {project.category}
-        </span>
-      </div>
-
-      <h3 className="font-headline font-black text-2xl md:text-3xl leading-none tracking-tighter uppercase mb-4 text-white group-hover:text-primary transition-colors duration-300">
-        {project.title}
-      </h3>
-
-      <p className="font-body text-[14px] md:text-[15px] text-white/60 leading-relaxed font-medium flex-1 mb-8">
-        {project.description}
-      </p>
-
-      <div className="flex flex-wrap gap-2 mb-8">
-        {project.technologies.map((tech: string) => (
-          <span
-            key={tech}
-            className="font-label text-[9px] font-bold text-white/40 border border-white/20 px-2 py-1 uppercase tracking-wider group-hover:border-white/40 group-hover:text-white transition-colors duration-300"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-
-      <div className="mt-auto pt-6 border-t border-white/10 flex justify-between items-center group-hover:border-white/20 transition-colors duration-300">
-        <span className="font-label text-[11px] font-bold text-white/30 tracking-widest">
-          {project.year}
-        </span>
-        <div className="w-10 h-10 flex items-center justify-center border-2 border-white/20 group-hover:bg-white group-hover:border-white group-hover:text-black transition-all duration-300">
-          <span className="material-symbols-outlined text-sm">north_east</span>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
+import ProjectCard from '../ui/ProjectCard';
 
 export const WorksSection = () => {
   const [activeCategory, setActiveCategory] = useState("ALL PROJECTS");
@@ -103,7 +54,7 @@ export const WorksSection = () => {
       className="relative min-h-screen px-12 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
     >
       {/* Background Watermark 03 */}
-      <div className="absolute bottom-[-10%] right-[-5%] leading-none select-none pointer-events-none z-0 overflow-hidden opacity-5">
+      <div className="absolute bottom-[-4%] right-[-5%] leading-none select-none pointer-events-none z-0 overflow-hidden opacity-5">
         <span className="font-headline font-black text-[clamp(250px,45vw,700px)] text-primary transition-colors duration-700 block translate-x-[15%]">
           02
         </span>
@@ -142,7 +93,7 @@ export const WorksSection = () => {
         <motion.div
           layout
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
         >
           <AnimatePresence mode="popLayout" initial={false}>
             {filteredProjects.map((project, i) => (
