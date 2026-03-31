@@ -47,7 +47,7 @@ export const HeroSection = () => (
         transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
         className="absolute inset-x-0 bottom-0 flex justify-center z-50 pointer-events-none"
       >
-        <div className="relative w-full max-w-2xl aspect-[4/5] mb-[-280px]">
+        <div className="relative w-full max-w-2xl aspect-[4/5] mb-[-340px]">
           <img 
             className="w-full h-full object-contain object-bottom" 
             alt="Mohit Jangid Portrait" 
