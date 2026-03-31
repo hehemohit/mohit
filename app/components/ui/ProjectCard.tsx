@@ -24,6 +24,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     return (
         <motion.a
             href={project.href || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
             layout="position"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

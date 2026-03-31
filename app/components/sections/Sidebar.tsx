@@ -61,6 +61,25 @@ const TwitterIcon = ({ size = 18 }) => (
     </svg>
 );
 
+const FileTextIcon = ({ size = 18 }) => (
+    <svg 
+        width={size} 
+        height={size} 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="currentColor" 
+        strokeWidth="1.5" 
+        strokeLinecap="round" 
+        strokeLinejoin="round"
+    >
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <line x1="16" y1="13" x2="8" y2="13" />
+        <line x1="16" y1="17" x2="8" y2="17" />
+        <line x1="10" y1="9" x2="8" y2="9" />
+    </svg>
+);
+
 export const Sidebar = () => {
     const [activeSectionId, setActiveSectionId] = useState("hero");
     const [isOpen, setIsOpen] = useState(false);
@@ -153,9 +172,10 @@ export const Sidebar = () => {
 
                 <div className="mt-auto flex flex-col items-center gap-6 pt-6">
                     {[
-                        { href: "https://github.com/hehemohit", icon: GithubIcon, label: "GITHUB" },
-                        { href: "https://www.linkedin.com/in/mohitjangid", icon: LinkedinIcon, label: "LINKEDIN" },
-                        { href: "#", icon: TwitterIcon, label: "X / TWITTER" },
+                        { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
+                        { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
+                        { icon: FileTextIcon, label: "RESUME", href: "#" },
+                        { icon: TwitterIcon, label: "X / TWITTER", href: "#" },
                     ].map(({ href, icon: Icon, label }) => (
                         <a
                             key={label}
@@ -235,7 +255,7 @@ export const Sidebar = () => {
 
                         <div className="p-10 border-t border-white/5 flex gap-8">
                             <a href="https://github.com/hehemohit" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">GITHUB</a>
-                            <a href="https://www.linkedin.com/in/mohitjangid" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">LINKEDIN</a>
+                            <a href="https://www.linkedin.com/in/mohit-jangid-a54762346/" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">LINKEDIN</a>
                         </div>
                     </motion.div>
                 )}

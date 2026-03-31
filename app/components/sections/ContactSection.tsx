@@ -21,7 +21,7 @@ const LinkedinIcon = ({ size = 18 }) => (
 
 const socials = [
     { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
-    { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohitjangid" },
+    { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
     { icon: FileText, label: "RESUME", href: "#" },
 ];
 
@@ -304,8 +304,8 @@ export const ContactSection = () => {
                     DESIGNED &amp; BUILT WITH PRECISION
                 </p>
                 <div className="flex gap-8 font-label text-[9px] font-black tracking-[0.2em] text-neutral-400">
-                    <a href="https://github.com/hehemohit" className="hover:text-primary transition-colors">GITHUB</a>
-                    <a href="https://www.linkedin.com/in/mohitjangid" className="hover:text-primary transition-colors">LINKEDIN</a>
+                    <a href="https://github.com/hehemohit" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GITHUB</a>
+                    <a href="https://www.linkedin.com/in/mohit-jangid-a54762346/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LINKEDIN</a>
                     <a href="mailto:mohit.jangid2805@gmail.com" className="hover:text-primary transition-colors">EMAIL</a>
                 </div>
             </div>
