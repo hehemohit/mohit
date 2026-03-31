@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export const HeroSection = () => (
-  <section className="min-h-[921px] flex items-center w-full px-12 sm:px-20 md:px-32 lg:px-48 py-24">
+  <section id="hero" className="min-h-[921px] flex items-center w-full px-12 sm:px-20 md:px-32 lg:px-48 py-24">
     <div className="max-w-7xl mx-auto w-full grid grid-cols-12 gap-8 items-end relative">
       <div className="col-span-12 relative z-0">
         <motion.h1 

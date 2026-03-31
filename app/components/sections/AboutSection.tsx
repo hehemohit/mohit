@@ -7,7 +7,7 @@ const skills = [
 ];
 
 const stats = [
-  { num: "01+", label: "YEARS EXPERIENCE" },
+  { num: "02+", label: "YEARS EXPERIENCE" },
   { num: "7.61", label: "CURRENT CGPA" }
 ];
 
@@ -29,7 +29,7 @@ export const AboutSection = () => (
         {/* Left Column: Title & Description */}
         <div className="lg:col-span-6 space-y-12">
           <div>
-            <h2 className="font-headline font-black text-4xl sm:text-5xl md:text-6xl tracking-tight uppercase text-white mb-4">
+            <h2 className="font-headline font-black text-4xl sm:text-5xl md:text-6xl tracking-tight uppercase text-primary mb-4">
               MOHIT JANGID
             </h2>
             <h2 className="font-headline font-black text-7xl sm:text-8xl md:text-9xl lg:text-[120px] tracking-tighter uppercase leading-[0.8] text-white">
