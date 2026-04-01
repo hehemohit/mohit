@@ -107,7 +107,9 @@ export const AboutSection = () => (
             viewport={{ once: true }}
           >
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1NRNVU2eaXZEbzzL9i_T-gGO1-M-FHxz7/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-primary text-black border-2 border-primary font-label font-black text-xs tracking-[0.2em] px-12 py-5 uppercase transition-all shadow-[6px_6px_0_0_rgba(255,49,49,0.2)] hover:shadow-[2px_2px_0_0_rgba(255,49,49,0.2)] hover:translate-x-[4px] hover:translate-y-[4px]"
             >
               DOWNLOAD_RESUME

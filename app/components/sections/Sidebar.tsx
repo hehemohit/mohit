@@ -174,7 +174,7 @@ export const Sidebar = () => {
                     {[
                         { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
                         { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
-                        { icon: FileTextIcon, label: "RESUME", href: "#" },
+                        { icon: FileTextIcon, label: "RESUME", href: "https://drive.google.com/file/d/1NRNVU2eaXZEbzzL9i_T-gGO1-M-FHxz7/view?usp=sharing" },
                         { icon: TwitterIcon, label: "X / TWITTER", href: "#" },
                     ].map(({ href, icon: Icon, label }) => (
                         <a
