@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const skills = [
@@ -11,7 +12,7 @@ const stats = [
   { num: "7.61", label: "CURRENT CGPA" }
 ];
 
-export const AboutSection = () => (
+export const AboutSection = ({ onOpenResume }: { onOpenResume: () => void }) => (
   <section
     id="philosophy"
     className="relative min-h-screen flex items-center px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
@@ -106,14 +107,12 @@ export const AboutSection = () => (
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <a
-              href="https://drive.google.com/file/d/1NRNVU2eaXZEbzzL9i_T-gGO1-M-FHxz7/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-primary text-black border-2 border-primary font-label font-black text-xs tracking-[0.2em] px-12 py-5 uppercase transition-all shadow-[6px_6px_0_0_rgba(255,49,49,0.2)] hover:shadow-[2px_2px_0_0_rgba(255,49,49,0.2)] hover:translate-x-[4px] hover:translate-y-[4px]"
+            <button
+              onClick={onOpenResume}
+              className="inline-block bg-primary text-black border-2 border-primary font-label font-black text-xs tracking-[0.2em] px-12 py-5 uppercase transition-all shadow-[6px_6px_0_0_rgba(255,49,49,0.2)] hover:shadow-[2px_2px_0_0_rgba(255,49,49,0.2)] hover:translate-x-[4px] hover:translate-y-[4px] cursor-pointer"
             >
               DOWNLOAD_RESUME
-            </a>
+            </button>
           </motion.div>
         </div>
       </div>

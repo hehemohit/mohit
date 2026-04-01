@@ -28,10 +28,10 @@ const LinkedinIcon = ({ size = 18 }) => (
 const socials = [
     { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
     { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
-    { icon: FileText, label: "RESUME", href: "https://drive.google.com/file/d/1NRNVU2eaXZEbzzL9i_T-gGO1-M-FHxz7/view?usp=sharing" },
+    { icon: FileText, label: "RESUME", href: "/resume" },
 ];
 
-export const ContactSection = () => {
+export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) => {
     const [formState, setFormState] = useState({ name: "", email: "", message: "" });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
@@ -137,8 +137,14 @@ export const ContactSection = () => {
                                 <motion.a
                                     key={label}
                                     href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
+                                    target={label === "RESUME" ? undefined : "_blank"}
+                                    rel={label === "RESUME" ? undefined : "noopener noreferrer"}
+                                    onClick={(e) => {
+                                        if (label === "RESUME") {
+                                            e.preventDefault();
+                                            onOpenResume();
+                                        }
+                                    }}
                                     initial={{ opacity: 0, y: 16 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
@@ -146,7 +152,7 @@ export const ContactSection = () => {
                                     className="group flex flex-col items-center justify-center gap-2 py-4 sm:py-5 px-2
                                                border border-neutral-800
                                                hover:border-primary hover:bg-neutral-950
-                                               transition-all duration-200"
+                                               transition-all duration-200 cursor-pointer"
                                 >
                                     <Icon
                                         size={18}

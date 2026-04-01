@@ -80,7 +80,7 @@ const FileTextIcon = ({ size = 18 }) => (
     </svg>
 );
 
-export const Sidebar = () => {
+export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
     const [activeSectionId, setActiveSectionId] = useState("hero");
     const [isOpen, setIsOpen] = useState(false);
 
@@ -174,14 +174,20 @@ export const Sidebar = () => {
                     {[
                         { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
                         { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
-                        { icon: FileTextIcon, label: "RESUME", href: "https://drive.google.com/file/d/1NRNVU2eaXZEbzzL9i_T-gGO1-M-FHxz7/view?usp=sharing" },
+                        { icon: FileTextIcon, label: "RESUME", href: "/resume" },
                         { icon: TwitterIcon, label: "X / TWITTER", href: "#" },
                     ].map(({ href, icon: Icon, label }) => (
                         <a
                             key={label}
                             href={href}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target={label === "RESUME" ? undefined : "_blank"}
+                            rel={label === "RESUME" ? undefined : "noopener noreferrer"}
+                            onClick={(e) => {
+                                if (label === "RESUME") {
+                                    e.preventDefault();
+                                    onOpenResume();
+                                }
+                            }}
                             aria-label={label}
                             className="group relative flex items-center justify-center w-10 h-10
                                        text-white/30 hover:text-primary transition-colors duration-300"
@@ -253,9 +259,18 @@ export const Sidebar = () => {
                             ))}
                         </div>
 
-                        <div className="p-10 border-t border-white/5 flex gap-8">
-                            <a href="https://github.com/hehemohit" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">GITHUB</a>
-                            <a href="https://www.linkedin.com/in/mohit-jangid-a54762346/" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">LINKEDIN</a>
+                        <div className="p-10 border-t border-white/5 flex flex-wrap gap-8">
+                            <a href="https://github.com/hehemohit" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">GITHUB</a>
+                            <a href="https://www.linkedin.com/in/mohit-jangid-a54762346/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">LINKEDIN</a>
+                            <button 
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    onOpenResume();
+                                }}
+                                className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase cursor-pointer"
+                            >
+                                RESUME
+                            </button>
                         </div>
                     </motion.div>
                 )}
