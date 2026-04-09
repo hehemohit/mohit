@@ -15,8 +15,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "SNAP MASTER | Editorial Photography Portfolio",
-  description: "High-End Editorial Photography Portfolio by SNAP MASTER",
+  title: "Mohit Portfolio",
+  description: "Portfolio of Mohit Jangid - Web Developer and Digital Strategist",
 };
 
 export default function RootLayout({
