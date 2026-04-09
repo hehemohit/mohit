@@ -141,6 +141,10 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                                 key={id}
                                 href={`#${id}`}
                                 aria-label={label}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+                                }}
                                 className="group relative flex items-center justify-center w-10 h-10"
                             >
                                 <motion.div
@@ -248,7 +252,13 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                                 <motion.a
                                     key={section.id}
                                     href={`#${section.id}`}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setIsOpen(false);
+                                        setTimeout(() => {
+                                            document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth' });
+                                        }, 300);
+                                    }}
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.1 * i }}
