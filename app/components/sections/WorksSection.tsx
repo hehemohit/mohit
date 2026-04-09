@@ -34,6 +34,16 @@ const projects = [
     id: "03",
     href: "https://efarmerr.vercel.app/",
     thumbnail: "/projects/efarmer.png"
+  },
+  {
+    title: "Parcos Luxury Beauty",
+    category: "WEB DEVELOPMENT",
+    description: "A premium luxury beauty e-commerce platform for international fragrance, skincare, and makeup brands.",
+    technologies: ["Next.js", "TailwindCSS", "React", "GCP"],
+    year: "2024",
+    id: "04",
+    href: "https://www.parcos.com/",
+    thumbnail: "/projects/parcos.png"
   }
 ];
 

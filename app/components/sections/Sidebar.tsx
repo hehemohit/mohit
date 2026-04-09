@@ -146,8 +146,8 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                                 <motion.div
                                     animate={{
                                         scale: isActive ? 2 : 1,
-                                        backgroundColor: isActive ? "var(--primary)" : "transparent",
-                                        borderColor: isActive ? "var(--primary)" : "white",
+                                        backgroundColor: isActive ? "#FF3131" : "rgba(255, 49, 49, 0)",
+                                        borderColor: isActive ? "#FF3131" : "#ffffff",
                                         opacity: isActive ? 1 : 0.2
                                     }}
                                     transition={{ duration: 0.3 }}
