@@ -96,6 +96,17 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isOpen]);
+
     const activeLabel =
         sections.find((s) => s.id === activeSectionId)?.label ?? "HOME";
 
@@ -222,7 +233,7 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                 >
                     <div className="w-6 flex flex-col gap-1.5">
                         <motion.span 
-                            animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 7 : 0 }}
+                            animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 8 : 0 }}
                             className="w-full h-0.5 bg-primary block" 
                         />
                         <motion.span 
@@ -230,13 +241,13 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                             className="w-full h-0.5 bg-white block" 
                         />
                         <motion.span 
-                            animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -7 : 0 }}
+                            animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -8 : 0 }}
                             className="w-full h-0.5 bg-primary block" 
                         />
                     </div>
                 </button>
             </div>
-
+ 
             {/* Mobile Fullscreen Menu */}
             <AnimatePresence>
                 {isOpen && (
@@ -245,9 +256,9 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                         animate="open"
                         exit="closed"
                         variants={menuVariants}
-                        className="lg:hidden fixed inset-0 z-40 bg-black flex flex-col"
+                        className="lg:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-lg flex flex-col overflow-y-auto"
                     >
-                        <div className="flex-1 flex flex-col justify-center px-10 gap-10">
+                        <div className="flex-1 flex flex-col justify-center min-h-[600px] px-10 py-24 gap-8">
                             {sections.map((section, i) => (
                                 <motion.a
                                     key={section.id}
@@ -262,13 +273,15 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 0.1 * i }}
-                                    className="font-headline font-black text-5xl sm:text-6xl uppercase tracking-tighter text-white hover:text-primary transition-colors"
+                                    className={`font-headline font-black text-5xl sm:text-6xl uppercase tracking-tighter transition-colors ${
+                                        activeSectionId === section.id ? 'text-primary' : 'text-white hover:text-primary'
+                                    }`}
                                 >
                                     {section.label}
                                 </motion.a>
                             ))}
                         </div>
-
+ 
                         <div className="p-10 border-t border-white/5 flex flex-wrap gap-8">
                             <a href="https://github.com/hehemohit" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">GITHUB</a>
                             <a href="https://www.linkedin.com/in/mohit-jangid-a54762346/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">LINKEDIN</a>
