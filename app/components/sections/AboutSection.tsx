@@ -9,7 +9,7 @@ const skills = [
 
 const stats = [
   { num: "02+", label: "YEARS EXPERIENCE" },
-  { num: "7.61", label: "CURRENT CGPA" }
+  { num: "8.12", label: "CURRENT CGPA" }
 ];
 
 export const AboutSection = ({ onOpenResume }: { onOpenResume: () => void }) => (
@@ -45,7 +45,7 @@ export const AboutSection = ({ onOpenResume }: { onOpenResume: () => void }) => 
               viewport={{ once: true }}
               className="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed"
             >
-              Based in Mumbai, I am a Computer Engineering student specializing in scalable systems and AI-driven accessibility. Currently a Web Developer Intern at DigitalVigyapan. 
+              Based in Mumbai, I am a Computer Engineering student specializing in scalable systems and AI-driven accessibility, with experience as a Developer Intern at DigitalVigyapan. 
             </motion.p>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}

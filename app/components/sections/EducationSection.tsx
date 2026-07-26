@@ -6,10 +6,10 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 const education = [
   {
     dates: "2023 - 2027",
-    degree: "B.E. in Computer Engineering",
-    institution: "Universal College of Engineering (Mumbai)",
+    degree: "Bachelor of Engineering (B.E.) in Computer Engineering",
+    institution: "Universal College of Engineering (University of Mumbai)",
     bullets: [
-      "Current CGPA: 7.61/10",
+      "Current CGPA: 8.12/10",
       "Specializing in Scalable Systems and AI-Driven Accessibility Research.",
       "Core Coursework: Data Structures, Software Engineering, Database Management."
     ]

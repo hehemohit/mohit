@@ -8,27 +8,27 @@ const projects = [
   {
     title: "EduAble Platform",
     category: "AI & EDTECH",
-    description: "AI-driven accessibility platform designed to empower differently-abled students with real-time learning tools.",
-    technologies: ["React", "Node.js", "GCP", "Gemini API"],
+    description: "AI-driven, accessibility-first platform (1st Place, CODE AUTOMATA 2.1 Hackathon) using the MERN stack and TypeScript. Developed a mobile-responsive interface with GCS and a custom Meta WhatsApp Bot for automated student support.",
+    technologies: ["MERN Stack", "TypeScript", "Google Cloud Storage", "Meta Graph API"],
     year: "2025",
     id: "01",
     href: "https://edu-able.vercel.app/",
     thumbnail: "/projects/eduable.png"
   },
   {
-    title: "StudyApp AI",
+    title: "Study-Focus",
     category: "AI & EDTECH",
-    description: "Gemini-powered productivity tool that automates study schedules and generates context-aware summaries.",
-    technologies: ["Next.js", "TailwindCSS", "Gemini API", "Clerk"],
+    description: "AI-powered productivity platform that automates 100% of manual task prioritization and reduces study planning time by 20% by using Google Gemini API to parse unstructured text into structured JSON metadata.",
+    technologies: ["Next.js", "Gemini API", "Prompt Engineering", "Clerk"],
     year: "2025",
     id: "02",
     href: "https://study-app-jet.vercel.app/",
     thumbnail: "/projects/study-app.png"
   },
   {
-    title: "EFarmer",
+    title: "eFarmer",
     category: "WEB DEVELOPMENT",
-    description: "Comprehensive agricultural e-commerce and supply chain management dashboard optimized for rural connectivity.",
+    description: "A comprehensive digital platform designed to bridge the gap between traditional agricultural practices and modern technology by providing farmers with a streamlined ecosystem for resource management.",
     technologies: ["React", "TailwindCSS", "Node.js", "Firebase"],
     year: "2024",
     id: "03",
@@ -36,12 +36,22 @@ const projects = [
     thumbnail: "/projects/efarmer.png"
   },
   {
+    title: "Game Dev Framework",
+    category: "GAME DEV",
+    description: "A scalable First-Person Shooter (FPS) framework built in Unity that reduces weapon implementation time by 50% using modular C# architecture, interface-based polymorphism, and ScriptableObjects.",
+    technologies: ["Unity", "C#", "OOP", "ScriptableObjects"],
+    year: "2025",
+    id: "04",
+    href: "#",
+    thumbnail: "/projects/game-dev.png"
+  },
+  {
     title: "Parcos Luxury Beauty",
     category: "WEB DEVELOPMENT",
     description: "A premium luxury beauty e-commerce platform for international fragrance, skincare, and makeup brands.",
     technologies: ["Next.js", "TailwindCSS", "React", "GCP"],
     year: "2024",
-    id: "04",
+    id: "05",
     href: "https://www.parcos.com/",
     thumbnail: "/projects/parcos.png"
   }

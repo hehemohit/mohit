@@ -4,20 +4,16 @@ import { motion } from 'framer-motion';
 
 const skillCategories = [
   {
-    label: "FRONTEND & WEB",
-    skills: ["React/MERN", "JavaScript", "HTML5", "CSS3", "TailwindCSS"]
+    label: "LANGUAGES",
+    skills: ["Java", "JavaScript", "C#", "HTML5", "CSS3", "Python"]
   },
   {
-    label: "BACKEND & CMS",
-    skills: ["Node.js", "Magento 2", "PHP", "REST APIs", "SQL"]
+    label: "FRAMEWORKS & LIBRARIES",
+    skills: ["React", "Node.js", "Express.js", "MongoDB (MERN)", "Next.js", "Tailwind CSS", "Spring Boot", "SQL", "Laravel"]
   },
   {
-    label: "CLOUD & TOOLS",
-    skills: ["GCP", "GCS", "Linux", "Git", "Postman"]
-  },
-  {
-    label: "GAME DEV & AI",
-    skills: ["Unity", "C#", "HLSL", "Gemini AI", "Prompt Engineering"]
+    label: "DEVELOPER TOOLS & PLATFORMS",
+    skills: ["Git", "Unity", "Magento", "Linux", "Ubuntu", "Kali", "Arch", "Google Cloud Platform (GCP)", "Google Cloud Storage (GCS)", "REST APIs"]
   }
 ];
 
@@ -68,7 +64,9 @@ export const SkillsSection = () => (
       {/* Grid Layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 lg:gap-x-20 gap-y-12 md:gap-y-16 max-w-7xl mx-auto w-full relative z-10">
         {skillCategories.map((cat, i) => (
-          <CategoryBlock key={cat.label} category={cat} index={i} />
+          <div key={cat.label} className={i === 2 ? "sm:col-span-2" : ""}>
+            <CategoryBlock category={cat} index={i} />
+          </div>
         ))}
       </div>
 
