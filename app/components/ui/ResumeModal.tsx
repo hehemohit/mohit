@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Download } from "lucide-react";
+import { X, ExternalLink } from "lucide-react";
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -44,19 +44,20 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                     MOHIT_JANGID_RESUME
                   </h3>
                   <p className="font-label text-[8px] tracking-[0.3em] uppercase text-neutral-500">
-                    PDF VIEWER / PORTFOLIO v1.0
+                    GOOGLE DRIVE VIEWER / PORTFOLIO v1.0
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <a
-                  href="/resume.pdf"
-                  download="Mohit_Jangid_Resume.pdf"
+                  href="https://drive.google.com/file/d/1Cp8mJPKvvNucmX8GN4wT9i05cRtTuCdV/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2.5 text-neutral-400 hover:text-primary hover:bg-white/5 transition-all rounded-sm border border-transparent hover:border-white/10 group"
-                  title="Download Resume"
+                  title="Open Resume in Google Drive"
                 >
-                  <Download size={18} className="group-hover:translate-y-0.5 transition-transform" />
+                  <ExternalLink size={18} className="group-hover:translate-y-0.5 transition-transform" />
                 </a>
                 <button
                   onClick={onClose}
@@ -71,7 +72,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             <div className="flex-1 overflow-auto bg-black p-6 sm:p-10 flex flex-col items-center gap-10 no-scrollbar">
               <div className="relative w-full max-w-[min(90vw,75vh)] aspect-square bg-neutral-900 border border-white/5 shadow-2xl overflow-hidden group">
                 <iframe
-                  src="/resume.pdf#toolbar=0&navpanes=0&view=FitH"
+                  src="https://drive.google.com/file/d/1Cp8mJPKvvNucmX8GN4wT9i05cRtTuCdV/preview"
                   className="w-full h-full border-none pointer-events-auto"
                 />
                 
@@ -90,7 +91,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             {/* Footer / Status bar */}
             <div className="px-6 py-2 bg-neutral-950 border-t border-white/5 flex items-center justify-between">
               <span className="font-label text-[7px] text-neutral-700 uppercase tracking-widest">
-                VIEWING: MOHIT_JANGID_RESUME_.PDF [144 KB]
+                VIEWING: MOHIT_JANGID_RESUME_.PDF [GOOGLE DRIVE]
               </span>
               <span className="font-label text-[7px] text-neutral-700 uppercase tracking-widest">
                 READY_FOR_COLABORATION

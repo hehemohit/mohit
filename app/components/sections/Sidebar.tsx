@@ -189,7 +189,7 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                     {[
                         { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
                         { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
-                        { icon: FileTextIcon, label: "RESUME", href: "/resume" },
+                        { icon: FileTextIcon, label: "RESUME", href: "https://drive.google.com/file/d/1Cp8mJPKvvNucmX8GN4wT9i05cRtTuCdV/view?usp=sharing" },
                         { icon: TwitterIcon, label: "X / TWITTER", href: "#" },
                     ].map(({ href, icon: Icon, label }) => (
                         <a

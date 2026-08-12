@@ -28,7 +28,7 @@ const LinkedinIcon = ({ size = 18 }) => (
 const socials = [
     { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
     { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
-    { icon: FileText, label: "RESUME", href: "/resume" },
+    { icon: FileText, label: "RESUME", href: "https://drive.google.com/file/d/1Cp8mJPKvvNucmX8GN4wT9i05cRtTuCdV/view?usp=sharing" },
 ];
 
 export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) => {
