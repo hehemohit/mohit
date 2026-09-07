@@ -49,7 +49,7 @@ export const HeroSection = () => (
           className="font-label uppercase tracking-[0.2em] text-primary text-[10px] flex items-center gap-3 overflow-hidden whitespace-nowrap"
         >
           <div className="h-px w-8 bg-primary" />
-          Digital Innovator
+          Software Engineer · Backend &amp; Agentic AI
         </motion.div>
 
         <motion.p
@@ -58,9 +58,8 @@ export const HeroSection = () => (
           transition={{ delay: 0.8 }}
           className="text-on-surface-variant font-light leading-relaxed text-sm max-w-[30ch]"
         >
-          Web Developer &amp; Digital Strategist. Building innovative digital
-          solutions and driving brand growth through creative strategies and
-          technical expertise.
+          Software Engineer specializing in scalable backend architectures,
+          distributed protocols, and autonomous multi-agent AI systems.
         </motion.p>
 
         <div className="flex gap-4">
@@ -116,9 +115,8 @@ export const HeroSection = () => (
             transition={{ delay: 0.8 }}
             className="text-on-surface-variant font-light leading-relaxed max-w-xs text-base"
           >
-            Web Developer &amp; Digital Strategist. Building innovative digital
-            solutions and driving brand growth through creative strategies and
-            technical expertise.
+            Software Engineer specializing in scalable backend architectures,
+            distributed protocols, and autonomous multi-agent AI systems.
           </motion.p>
         </div>
 
@@ -150,7 +148,7 @@ export const HeroSection = () => (
             className="font-label uppercase tracking-[0.2em] text-primary text-xs flex items-center justify-end gap-4 overflow-hidden whitespace-nowrap"
           >
             <div className="h-px w-12 bg-primary" />
-            Digital Innovator
+            SWE // Distributed Systems
           </motion.div>
           <motion.p
             initial={{ opacity: 0 }}
@@ -158,8 +156,8 @@ export const HeroSection = () => (
             transition={{ delay: 0.8 }}
             className="text-on-surface-variant font-light leading-relaxed max-w-xs text-base"
           >
-            Architecting unified CMS systems and high-converting web
-            applications at the intersection of automation and design.
+            Engineering resilient Java & Node.js backend services, P2P mesh
+            protocols, and supervisor-worker agentic AI pipelines.
           </motion.p>
         </div>
 

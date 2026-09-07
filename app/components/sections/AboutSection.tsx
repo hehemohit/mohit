@@ -4,12 +4,12 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const skills = [
-  "REACT/MERN", "NODE.JS", "MAGENTO", "UNITY", "C#", "JAVASCRIPT", "GCP", "REST APIs"
+  "JAVA / SPRING BOOT", "AGENTIC AI / LANGGRAPH", "DISTRIBUTED BACKEND", "NODE.JS / TS", "POSTGRES & REDIS", "DOCKER & K8S", "GCP & CLUSTER DEPLOY", "REST & SSE"
 ];
 
 const stats = [
   { num: "02+", label: "YEARS EXPERIENCE" },
-  { num: "8.12", label: "CURRENT CGPA" }
+  { num: "8.35", label: "CURRENT CGPA" }
 ];
 
 export const AboutSection = ({ onOpenResume }: { onOpenResume: () => void }) => (
@@ -45,7 +45,7 @@ export const AboutSection = ({ onOpenResume }: { onOpenResume: () => void }) => 
               viewport={{ once: true }}
               className="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed"
             >
-              Based in Mumbai, I am a Computer Engineering student specializing in scalable systems and AI-driven accessibility, with experience as a Developer Intern at DigitalVigyapan. 
+              Based in Mumbai, I am a Computer Engineering student specializing in scalable backend services, distributed protocols, and autonomous agentic AI architectures, with experience as a Developer Intern at DigitalVigyapan.
             </motion.p>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ export const AboutSection = ({ onOpenResume }: { onOpenResume: () => void }) => 
               transition={{ delay: 0.1 }}
               className="text-base text-on-surface-variant/60 font-light leading-relaxed"
             >
-              My philosophy centers on technical precision and creative strategy. From refactoring codebases that drive conversions to architecting modular game frameworks, I focus on building tools that simplify complex problems.
+              My philosophy centers on engineering precision and systems thinking. From building Java & Node.js backend services and P2P mesh protocols, to orchestrating multi-agent AI pipelines with Supervisor-Worker topologies — I design systems that are resilient, deterministic, and built to scale.
             </motion.p>
           </div>
         </div>

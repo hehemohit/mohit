@@ -8,28 +8,21 @@ const experiences = [
     role: "Developer Intern",
     company: "DigitalVigyapan",
     bullets: [
-      "Refactored the Magento codebase to implement responsive frontend rendering for Parcos, optimizing mobile performance which drove a 23.6% increase in sales conversions; well versed in Linux environment and deployment processes.",
-      "Engineered a custom internal tool using React and Node.js to automate content publishing pipelines. Enforced schema validation in MongoDB, achieving a 70% reduction in fault rates and optimizing team throughput by 15%.",
-      "Architected and developed a unified content management system (CMS) utilizing Google Cloud Platform (GCP) services for multi-platform content regulation. Integrated the YouTube Data API, Meta Graph API, and LinkedIn Marketing/Share API to enable centralized scheduling, increasing user engagement; also experienced in basic Pen testing."
+      "Architected an agentic multi-stage pipeline that ingested raw video scripts to autonomously generate SEO-optimized titles, video descriptions, and contextual product recommendations; then implemented a multi-agent feedback loop that cross-analyzed post-publish analytics (retention, CTR, drop-offs) to autonomously generate actionable optimization briefs — eliminating manual editorial review cycles.",
+      "Engineered a custom internal automation suite using React, Node.js, and MongoDB with strict schema validation, reducing data fault rates by 70% and accelerating team publishing throughput by 15%.",
+      "Built a centralized CMS on GCP integrating YouTube Data, Meta Graph, and LinkedIn APIs for multi-channel automated publishing — saving 10+ manual hours weekly and expanding engagement reach by 25%.",
+      "Refactored Magento frontend architecture for Parcos with responsive design optimizations on Linux deployment pipelines, driving a 23.6% lift in mobile conversions; also experienced in basic penetration testing."
     ]
   }
 ];
 
 const responsibilities = [
   {
-    role: "Sports Head",
-    organization: "Students' Council",
+    role: "Sports Head & Event Head",
+    organization: "Students' Council & AURORA Fest (Yearly fest of UCOE)",
     bullets: [
-      "Led the organization of the annual Sports Fest, managing a core team for an event of over 1,000 students.",
-      "Represented the college in intercollegiate tournaments, securing 1st position and earning 8 medals across events including ICT Volleyball."
-    ]
-  },
-  {
-    role: "Event Head",
-    organization: "AURORA Fest (Yearly fest of UCOE)",
-    bullets: [
-      "Constructed a dynamic, real-time points table and leaderboard system for the event, streamline-tracking scores and results to keep participants and coordinators synchronized.",
-      "Mitigated operational bottlenecks by leveraging technical solutions to replace traditional, manual tracking, resulting in zero scheduling delays and a highly structured, smooth tournament flow."
+      "Led the organization of the annual Sports Fest as Sports Head for the Students' Council, managing a core team for an event of over 1,000 students; represented the college in intercollegiate tournaments, securing 1st position and earning 8 medals across events including ICT Volleyball.",
+      "As Event Head for AURORA Fest, built a dynamic real-time points table and leaderboard system that replaced all manual tracking — resulting in zero scheduling delays and a smooth, highly structured tournament flow."
     ]
   }
 ];

@@ -15,8 +15,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Mohit Portfolio",
-  description: "Portfolio of Mohit Jangid - Web Developer and Digital Strategist",
+  title: "Mohit Jangid | Software Engineer — Backend, Java & Agentic AI Systems",
+  description: "Portfolio of Mohit Jangid — Software Engineer specializing in scalable Java & Node.js backend architectures, distributed protocols, and autonomous multi-agent AI systems (LangGraph, Supervisor-Worker pattern). Computer Engineering student at University of Mumbai with hands-on internship and hackathon experience.",
 };
 
 export default function RootLayout({

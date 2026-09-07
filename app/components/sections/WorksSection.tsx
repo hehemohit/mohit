@@ -2,54 +2,54 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const categories = ["ALL PROJECTS", "AI & EDTECH", "WEB DEVELOPMENT", "GAME DEV"];
+const categories = ["ALL PROJECTS", "AGENTIC AI & SYSTEMS", "BACKEND & PROTOCOLS", "FULL STACK & WEB"];
 
 const projects = [
   {
-    title: "EduAble Platform",
-    category: "AI & EDTECH",
-    description: "AI-driven, accessibility-first platform (1st Place, CODE AUTOMATA 2.1 Hackathon) using the MERN stack and TypeScript. Developed a mobile-responsive interface with GCS and a custom Meta WhatsApp Bot for automated student support.",
-    technologies: ["MERN Stack", "TypeScript", "Google Cloud Storage", "Meta Graph API"],
+    title: "ZeroGrid",
+    category: "BACKEND & PROTOCOLS",
+    description: "Serverless P2P mesh network on Android using Wi-Fi Direct & BLE, achieving multi-hop relay up to 8 hops with store-and-forward packet transmission. Zero-trust encrypted with Curve25519 & AES-256-GCM, achieving <5% packet drop over low-latency socket communication.",
+    technologies: ["Android / Kotlin", "Wi-Fi Direct & BLE", "Curve25519 / AES-256-GCM", "P2P Sockets", "Distributed Systems"],
     year: "2025",
     id: "01",
+    href: "#",
+    thumbnail: "/projects/zerogrid.jpg"
+  },
+  {
+    title: "FitMatrix",
+    category: "AGENTIC AI & SYSTEMS",
+    description: "Autonomous coaching engine using a Supervisor-Worker topology with 5 domain agents synchronized via a centralized blackboard JSON state. Decoupled deterministic calculations (TDEE, 1RM) from LLM reasoning, streaming sub-second adaptive recommendations over Server-Sent Events (SSE) with Android Health Connect sync.",
+    technologies: ["LangGraph & Agentic AI", "Supervisor-Worker Pattern", "SSE & Streaming APIs", "Android Health Connect", "Zustand / TanStack Query"],
+    year: "2025",
+    id: "02",
+    href: "#",
+    thumbnail: "/projects/fitmatrix.jpg"
+  },
+  {
+    title: "EduAble Platform",
+    category: "AGENTIC AI & SYSTEMS",
+    description: "1st Place at CODE AUTOMATA 2.1 Hackathon (500+ teams). AI-driven accessibility platform with a WhatsApp Business Bot serving <2s real-time queries for students. Built RESTful backend on MERN stack with TypeScript, GCS pipeline integration, and Meta Graph API automation.",
+    technologies: ["MERN Stack", "TypeScript", "Google Cloud Storage", "Meta Graph API"],
+    year: "2025",
+    id: "03",
     href: "https://edu-able.vercel.app/",
     thumbnail: "/projects/eduable.png"
   },
   {
     title: "Study-Focus",
-    category: "AI & EDTECH",
-    description: "AI-powered productivity platform that automates 100% of manual task prioritization and reduces study planning time by 20% by using Google Gemini API to parse unstructured text into structured JSON metadata.",
-    technologies: ["Next.js", "Gemini API", "Prompt Engineering", "Clerk"],
+    category: "FULL STACK & WEB",
+    description: "AI productivity platform that automates 100% of task prioritization. Built secure, scalable RESTful APIs and leveraged Google Gemini API to parse unstructured text into structured, metadata-rich JSON schemas — reducing study planning time by 20%.",
+    technologies: ["Next.js", "Gemini API", "RESTful APIs", "Clerk Auth"],
     year: "2025",
-    id: "02",
+    id: "04",
     href: "https://study-app-jet.vercel.app/",
     thumbnail: "/projects/study-app.png"
   },
   {
-    title: "eFarmer",
-    category: "WEB DEVELOPMENT",
-    description: "A comprehensive digital platform designed to bridge the gap between traditional agricultural practices and modern technology by providing farmers with a streamlined ecosystem for resource management.",
-    technologies: ["React", "TailwindCSS", "Node.js", "Firebase"],
-    year: "2024",
-    id: "03",
-    href: "https://efarmerr.vercel.app/",
-    thumbnail: "/projects/efarmer.png"
-  },
-  {
-    title: "Game Dev Framework",
-    category: "GAME DEV",
-    description: "A scalable First-Person Shooter (FPS) framework built in Unity that reduces weapon implementation time by 50% using modular C# architecture, interface-based polymorphism, and ScriptableObjects.",
-    technologies: ["Unity", "C#", "OOP", "ScriptableObjects"],
-    year: "2025",
-    id: "04",
-    href: "#",
-    thumbnail: "/projects/game-dev.png"
-  },
-  {
     title: "Parcos Luxury Beauty",
-    category: "WEB DEVELOPMENT",
-    description: "A premium luxury beauty e-commerce platform for international fragrance, skincare, and makeup brands.",
-    technologies: ["Next.js", "TailwindCSS", "React", "GCP"],
+    category: "FULL STACK & WEB",
+    description: "Refactored Magento frontend architecture and Linux deployment pipelines for a premium luxury e-commerce platform, cutting mobile load times and driving a 23.6% lift in mobile sales conversions across international fragrance, skincare and makeup brands.",
+    technologies: ["Magento / React", "Linux Pipelines", "REST APIs", "GCP"],
     year: "2024",
     id: "05",
     href: "https://www.parcos.com/",

@@ -5,13 +5,13 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 
 const education = [
   {
-    dates: "2023 - 2027",
+    dates: "2023 - May 2027",
     degree: "Bachelor of Engineering (B.E.) in Computer Engineering",
     institution: "Universal College of Engineering (University of Mumbai)",
     bullets: [
-      "Current CGPA: 8.12/10",
-      "Specializing in Scalable Systems and AI-Driven Accessibility Research.",
-      "Core Coursework: Data Structures, Software Engineering, Database Management."
+      "Current CGPA: 8.35 / 10",
+      "Focus Areas: Distributed Systems, Scalable Backend Services, and Autonomous Agentic AI Architectures.",
+      "Core Coursework: Data Structures & Algorithms, Software Engineering (SWE), Database Management Systems, Object-Oriented Programming (Java)."
     ]
   }
 ];

@@ -5,15 +5,23 @@ import { motion } from 'framer-motion';
 const skillCategories = [
   {
     label: "LANGUAGES",
-    skills: ["Java", "JavaScript", "C#", "HTML5", "CSS3", "Python"]
+    skills: ["Java", "Python", "TypeScript", "JavaScript", "SQL", "Kotlin", "C#"]
   },
   {
-    label: "FRAMEWORKS & LIBRARIES",
-    skills: ["React", "Node.js", "Express.js", "MongoDB (MERN)", "Next.js", "Tailwind CSS", "Spring Boot", "SQL", "Laravel"]
+    label: "BACKEND & ARCHITECTURE",
+    skills: ["Spring Boot", "Node.js", "Express.js", "RESTful APIs", "Server-Sent Events (SSE)", "PostgreSQL", "Redis", "MongoDB", "SQLite"]
   },
   {
-    label: "DEVELOPER TOOLS & PLATFORMS",
-    skills: ["Git", "Unity", "Magento", "Linux", "Ubuntu", "Kali", "Arch", "Google Cloud Platform (GCP)", "Google Cloud Storage (GCS)", "REST APIs"]
+    label: "AGENTIC AI & ORCHESTRATION",
+    skills: ["LangGraph", "Multi-Agent Orchestration", "Supervisor-Worker Pattern", "LLM Contextual Reasoning", "Blackboard State Pattern", "Gemini API", "Prompt Engineering"]
+  },
+  {
+    label: "PLATFORMS & DEVELOPER TOOLS",
+    skills: ["Docker", "Linux", "Google Cloud Platform (GCP)", "Google Cloud Storage (GCS)", "Git", "Unity", "Magento", "Kali / Ubuntu / Arch"]
+  },
+  {
+    label: "FRONTEND & MOBILE",
+    skills: ["React", "Next.js", "React Native", "Zustand", "TanStack Query", "Android Health Connect API", "Tailwind CSS"]
   }
 ];
 
@@ -64,7 +72,7 @@ export const SkillsSection = () => (
       {/* Grid Layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 lg:gap-x-20 gap-y-12 md:gap-y-16 max-w-7xl mx-auto w-full relative z-10">
         {skillCategories.map((cat, i) => (
-          <div key={cat.label} className={i === 2 ? "sm:col-span-2" : ""}>
+          <div key={cat.label} className={i === 4 ? "sm:col-span-2" : ""}>
             <CategoryBlock category={cat} index={i} />
           </div>
         ))}
