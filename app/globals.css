@@ -78,9 +78,9 @@ html {
   --color-surface-container-high: #080000;
   --color-surface-container-highest: #140000;
 
-  --font-headline: 'Poppins', sans-serif;
-  --font-body: 'Outfit', sans-serif;
-  --font-label: 'Outfit', sans-serif;
+  --font-headline: var(--font-epilogue), sans-serif;
+  --font-body: var(--font-manrope), sans-serif;
+  --font-label: var(--font-manrope), sans-serif;
 
   --radius-full: 9999px;
   --radius-xl: 1.5rem;

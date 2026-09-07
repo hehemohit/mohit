@@ -270,7 +270,7 @@ export const LeetCodeSection = () => {
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <div>
               <h4 className="font-headline font-black text-lg uppercase tracking-tight text-white">SUBMISSION ACTIVITY</h4>
-              <p className="font-label text-[10px] text-outline uppercase tracking-widest mt-1">Consistency metric â€” last 28 weeks</p>
+              <p className="font-label text-[10px] text-outline uppercase tracking-widest mt-1">Consistency metric // last 28 weeks</p>
             </div>
             <div className="flex items-center gap-2 font-label text-[9px] text-outline tracking-widest">
               <span>LESS</span>

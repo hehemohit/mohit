@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -42,6 +42,13 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
         setIsSubmitting(true);
         setSendError(false);
 
+        if (!EMAILJS_SERVICE_ID || !EMAILJS_PUBLIC_KEY) {
+            window.location.href = `mailto:mohit.jangid2805@gmail.com?subject=${encodeURIComponent(`New Portfolio Contact: ${formState.name}`)}&body=${encodeURIComponent(formState.message)}`;
+            setSubmitted(true);
+            setIsSubmitting(false);
+            return;
+        }
+
         try {
             const templateParams = {
                 from_name: formState.name,
@@ -79,7 +86,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                        px-5 pt-20 pb-24
                        sm:px-8 sm:pt-28 sm:pb-32
                        md:px-16 md:pt-36 md:pb-40
-                       lg:px-24"
+                       lg:pr-24 lg:pl-[calc(5rem+6rem)]"
         >
             {/* Background watermark */}
             <div
@@ -128,7 +135,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                             className="font-body text-sm sm:text-base text-neutral-400 leading-relaxed mb-8 max-w-sm"
                         >
                             Whether you have a specific project in mind or just want to explore a
-                            potential collaboration â€” I&apos;m ready to build something exceptional.
+                            potential collaboration — I&apos;m ready to build something exceptional.
                         </motion.p>
 
                         {/* Social cards */}
@@ -279,7 +286,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                                         className="flex items-center gap-2 text-primary text-xs font-label tracking-wide"
                                     >
                                         <AlertCircle size={14} />
-                                        Transmission failed â€” please try again or email directly.
+                                        Transmission failed — please try again or email directly.
                                     </motion.div>
                                 )}
 
@@ -292,9 +299,9 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                                                transition-all duration-150
                                                hover:translate-x-[3px] hover:-translate-y-[3px]
                                                hover:shadow-[6px_6px_0_0_#fff]
-                                               disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+                                               disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-none cursor-pointer"
                                 >
-                                    {isSubmitting ? "TRANSMITTING..." : "SEND_MESSAGE â†’"}
+                                    {isSubmitting ? "TRANSMITTING..." : "SEND_MESSAGE →"}
                                 </button>
                             </form>
                         )}
@@ -302,7 +309,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                 </div>
             </div>
 
-            {/* â”€â”€ Footer â”€â”€ */}
+            {/* ── Footer ── */}
             <div className="relative z-10 max-w-7xl mx-auto mt-24 sm:mt-32 pt-8 border-t border-neutral-900
                             flex flex-col sm:flex-row justify-between items-center gap-6">
                 <div className="flex flex-col items-center sm:items-start gap-0.5">
@@ -310,7 +317,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                         MOHIT JANGID
                     </span>
                     <span className="font-label text-[9px] text-neutral-400 uppercase tracking-[0.35em]">
-                        Â© 2026 MOHIT JANGID
+                        © 2026 MOHIT JANGID
                     </span>
                 </div>
                 <p className="font-label text-[9px] text-neutral-400 uppercase tracking-[0.2em] hidden sm:block font-bold">

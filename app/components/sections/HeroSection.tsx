@@ -2,12 +2,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const icons = ['code', 'terminal', 'bolt'] as const;
+const iconDetails = [
+  { icon: 'code', label: 'Clean Architecture & Systems' },
+  { icon: 'terminal', label: 'Backend & Cloud Infrastructure' },
+  { icon: 'bolt', label: 'High-Performance & Distributed Mesh' }
+] as const;
 
 export const HeroSection = () => (
   <section
     id="hero"
-    className="min-h-screen flex items-center w-full px-6 sm:px-20 md:px-32 lg:px-48 py-24 overflow-hidden"
+    className="min-h-screen flex items-center w-full px-6 sm:px-20 md:px-32 lg:pr-24 lg:pl-[calc(5rem+6rem)] py-24 overflow-hidden"
   >
     <div className="max-w-7xl mx-auto w-full">
 
@@ -56,24 +60,24 @@ export const HeroSection = () => (
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          className="text-on-surface-variant font-light leading-relaxed text-sm max-w-[30ch]"
+          className="text-neutral-300 font-light leading-relaxed text-sm max-w-[30ch]"
         >
           Software Engineer specializing in scalable backend architectures,
           distributed protocols, and autonomous multi-agent AI systems.
         </motion.p>
 
         <div className="flex gap-4">
-          {icons.map((icon, i) => (
-            <motion.a
-              key={icon}
+          {iconDetails.map((item, i) => (
+            <motion.div
+              key={item.icon}
+              title={item.label}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 + i * 0.1 }}
-              className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-surface transition-all"
-              href="#"
+              className="w-10 h-10 rounded-full border border-primary/40 bg-surface-variant flex items-center justify-center text-neutral-300 hover:border-primary hover:bg-primary hover:text-black transition-all cursor-help"
             >
-              <span className="material-symbols-outlined text-sm">{icon}</span>
-            </motion.a>
+              <span className="material-symbols-outlined text-sm">{item.icon}</span>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -94,26 +98,26 @@ export const HeroSection = () => (
         </div>
 
         {/* Left column — icons + tagline */}
-        <div className="col-span-4 flex flex-col justify-end space-y-8 relative z-20">
+        <div className="col-span-4 flex flex-col justify-end space-y-8 relative z-20 translate-y-4">
           <div className="flex gap-4">
-            {icons.map((icon, i) => (
-              <motion.a
-                key={icon}
+            {iconDetails.map((item, i) => (
+              <motion.div
+                key={item.icon}
+                title={item.label}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5 + i * 0.1 }}
-                className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-surface transition-all"
-                href="#"
+                className="w-10 h-10 rounded-full border border-primary/30 bg-surface-variant flex items-center justify-center text-neutral-300 hover:border-primary hover:bg-primary hover:text-black transition-all cursor-help shadow-[0_0_15px_rgba(255,49,49,0.1)]"
               >
-                <span className="material-symbols-outlined text-sm">{icon}</span>
-              </motion.a>
+                <span className="material-symbols-outlined text-sm">{item.icon}</span>
+              </motion.div>
             ))}
           </div>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="text-on-surface-variant font-light leading-relaxed max-w-xs text-base"
+            className="text-neutral-300 font-light leading-relaxed max-w-xs text-base"
           >
             Software Engineer specializing in scalable backend architectures,
             distributed protocols, and autonomous multi-agent AI systems.
@@ -141,7 +145,7 @@ export const HeroSection = () => (
         </motion.div>
 
         {/* Right column — Digital Innovator label + description */}
-        <div className="col-span-4 col-start-9 flex flex-col justify-end items-end text-right space-y-8 relative z-20 translate-y-32">
+        <div className="col-span-4 col-start-9 flex flex-col justify-end items-end text-right space-y-8 relative z-20 translate-y-4">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "auto" }}
@@ -154,7 +158,7 @@ export const HeroSection = () => (
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="text-on-surface-variant font-light leading-relaxed max-w-xs text-base"
+            className="text-neutral-300 font-light leading-relaxed max-w-xs text-base"
           >
             Engineering resilient Java & Node.js backend services, P2P mesh
             protocols, and supervisor-worker agentic AI pipelines.

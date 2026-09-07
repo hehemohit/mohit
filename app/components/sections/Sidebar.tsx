@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -191,7 +191,6 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                         { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
                         { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
                         { icon: FileTextIcon, label: "RESUME", href: "https://drive.google.com/file/d/1TDBcqDduiIlJQHeEDacC26IsZyi0A4qT/view?usp=sharing" },
-                        { icon: TwitterIcon, label: "X / TWITTER", href: "#" },
                     ].map(({ href, icon: Icon, label }) => (
                         <a
                             key={label}
@@ -230,7 +229,7 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
             <div className="lg:hidden fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-end pointer-events-none">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="pointer-events-auto w-12 h-12 bg-black border border-white/10 flex items-center justify-center active:scale-95 transition-all"
+                    className="pointer-events-auto w-12 h-12 bg-black border border-white/10 flex items-center justify-center active:scale-95 transition-all cursor-pointer"
                 >
                     <div className="w-6 flex flex-col gap-1.5">
                         <motion.span 
@@ -259,7 +258,7 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                         variants={menuVariants}
                         className="lg:hidden fixed inset-0 z-40 bg-black/95 backdrop-blur-lg flex flex-col overflow-y-auto"
                     >
-                        <div className="flex-1 flex flex-col justify-center min-h-[600px] px-10 py-24 gap-8">
+                        <div className="flex-1 flex flex-col justify-center px-10 py-20 gap-6">
                             {sections.map((section, i) => (
                                 <motion.a
                                     key={section.id}
@@ -273,8 +272,8 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                                     }}
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: 0.1 * i }}
-                                    className={`font-headline font-black text-5xl sm:text-6xl uppercase tracking-tighter transition-colors ${
+                                    transition={{ delay: 0.08 * i }}
+                                    className={`font-headline font-black text-4xl sm:text-5xl uppercase tracking-tighter transition-colors ${
                                         activeSectionId === section.id ? 'text-primary' : 'text-white hover:text-primary'
                                     }`}
                                 >
@@ -283,7 +282,7 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                             ))}
                         </div>
  
-                        <div className="p-10 border-t border-white/5 flex flex-wrap gap-8">
+                        <div className="p-8 border-t border-white/5 flex flex-wrap gap-8">
                             <a href="https://github.com/hehemohit" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">GITHUB</a>
                             <a href="https://www.linkedin.com/in/mohit-jangid-a54762346/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-primary transition-colors font-label font-black text-[10px] tracking-widest uppercase">LINKEDIN</a>
                             <button 

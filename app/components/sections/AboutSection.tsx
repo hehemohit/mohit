@@ -15,7 +15,7 @@ const stats = [
 export const AboutSection = ({ onOpenResume }: { onOpenResume: () => void }) => (
   <section
     id="philosophy"
-    className="relative min-h-screen flex items-center px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
+    className="relative min-h-screen flex items-center px-6 sm:px-20 md:px-32 lg:pr-24 lg:pl-[calc(5rem+6rem)] py-24 overflow-hidden"
   >
     {/* Background Watermark 01 */}
     <div className="absolute bottom-[-10%] right-[-5%] md:right-[-5%] leading-none select-none pointer-events-none z-0 overflow-hidden opacity-5">
@@ -43,7 +43,7 @@ export const AboutSection = ({ onOpenResume }: { onOpenResume: () => void }) => 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-xl md:text-2xl text-on-surface-variant font-light leading-relaxed"
+              className="text-xl md:text-2xl text-neutral-200 font-light leading-relaxed"
             >
               Based in Mumbai, I am a Computer Engineering student specializing in scalable backend services, distributed protocols, and autonomous agentic AI architectures, with experience as a Developer Intern at DigitalVigyapan.
             </motion.p>
@@ -52,7 +52,7 @@ export const AboutSection = ({ onOpenResume }: { onOpenResume: () => void }) => 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-base text-on-surface-variant/60 font-light leading-relaxed"
+              className="text-base text-neutral-400 font-normal leading-relaxed"
             >
               My philosophy centers on engineering precision and systems thinking. From building Java & Node.js backend services and P2P mesh protocols, to orchestrating multi-agent AI pipelines with Supervisor-Worker topologies — I design systems that are resilient, deterministic, and built to scale.
             </motion.p>

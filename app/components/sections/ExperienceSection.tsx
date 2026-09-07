@@ -20,6 +20,7 @@ const responsibilities = [
   {
     role: "Sports Head",
     organization: "Students' Council",
+    tenure: "2024 - 2025",
     bullets: [
       "Led the organization of the annual Sports Fest, managing a core team for an event of over 1,000 students.",
       "Represented the college in intercollegiate tournaments, securing 1st position and earning 8 medals across events including ICT Volleyball."
@@ -28,6 +29,7 @@ const responsibilities = [
   {
     role: "Event Head",
     organization: "AURORA Fest (Yearly fest of UCOE)",
+    tenure: "2024",
     bullets: [
       "Built a dynamic real-time points table and leaderboard system that replaced all manual tracking — resulting in zero scheduling delays and a smooth, highly structured tournament flow.",
       "Mitigated operational bottlenecks by leveraging technical solutions to streamline score-tracking and keep participants and coordinators synchronized throughout the event."
@@ -38,7 +40,7 @@ const responsibilities = [
 export const ExperienceSection = () => (
   <section
     id="experience"
-    className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
+    className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:pr-24 lg:pl-[calc(5rem+6rem)] py-24 overflow-hidden"
   >
     {/* Header */}
     <div className="mb-24 max-w-7xl mx-auto w-full">
@@ -88,12 +90,12 @@ export const ExperienceSection = () => (
                   {exp.bullets.map((bullet, j) => (
                     <li
                       key={j}
-                      className="flex gap-4 font-body text-[16px] text-on-surface-variant leading-relaxed group/item"
+                      className="flex gap-4 font-body text-[16px] text-neutral-300 leading-relaxed group/item"
                     >
                       <span className="text-primary font-label font-black mt-1 shrink-0 transition-transform group-hover/item:translate-x-1">
                         →
                       </span>
-                      <span className="group-hover/item:text-on-surface transition-colors duration-300">
+                      <span className="group-hover/item:text-white transition-colors duration-300">
                         {bullet}
                       </span>
                     </li>
@@ -132,7 +134,7 @@ export const ExperienceSection = () => (
                 {/* Left side: Role info label */}
                 <div className="md:w-[120px] md:shrink-0 mb-3 md:mb-0">
                   <span className="font-label text-[11px] font-black tracking-widest text-outline uppercase">
-                    Leadership
+                    {resp.tenure}
                   </span>
                 </div>
 
@@ -154,12 +156,12 @@ export const ExperienceSection = () => (
                     {resp.bullets.map((bullet, j) => (
                       <li
                         key={j}
-                        className="flex gap-4 font-body text-[16px] text-on-surface-variant leading-relaxed group/item"
+                        className="flex gap-4 font-body text-[16px] text-neutral-300 leading-relaxed group/item"
                       >
                         <span className="text-primary font-label font-black mt-1 shrink-0 transition-transform group-hover/item:translate-x-1">
                           →
                         </span>
-                        <span className="group-hover/item:text-on-surface transition-colors duration-300">
+                        <span className="group-hover/item:text-white transition-colors duration-300">
                           {bullet}
                         </span>
                       </li>

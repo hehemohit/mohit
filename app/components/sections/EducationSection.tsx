@@ -16,10 +16,22 @@ const education = [
   }
 ];
 
+const achievements = [
+  {
+    dates: "2025",
+    degree: "1st Place Winner — CODE AUTOMATA 2.1",
+    institution: "National Hackathon (500+ Competing Teams)",
+    bullets: [
+      "Architected and deployed EduAble — an AI accessibility engine integrating WhatsApp Business Bot with sub-2s response latency.",
+      "Implemented MERN stack with TypeScript, Google Cloud Storage pipelines, and Meta Graph API webhook automation."
+    ]
+  }
+];
+
 export const EducationSection = () => (
   <section
     id="education"
-    className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
+    className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:pr-24 lg:pl-[calc(5rem+6rem)] py-24 overflow-hidden"
   >
     {/* Header */}
     <div className="mb-24 max-w-7xl mx-auto w-full">
@@ -58,7 +70,7 @@ export const EducationSection = () => (
 
               {/* Right side: Content */}
               <div className="md:pl-20 flex-1 min-w-0">
-                <h3 className="font-headline font-black text-[clamp(28px,5vw,60px)] tracking-tighter uppercase leading-none mb-3 text-on-surface group-hover:text-primary transition-colors duration-300">
+                <h3 className="font-headline font-black text-[clamp(28px,5vw,60px)] tracking-tighter uppercase leading-none mb-3 text-white group-hover:text-primary transition-colors duration-300">
                   {edu.degree}
                 </h3>
                 <p className="font-label text-[13px] font-black tracking-[0.2em] text-primary uppercase mb-8">
@@ -69,12 +81,12 @@ export const EducationSection = () => (
                   {edu.bullets.map((bullet, j) => (
                     <li
                       key={j}
-                      className="flex gap-4 font-body text-[16px] text-on-surface-variant leading-relaxed group/item"
+                      className="flex gap-4 font-body text-[16px] text-neutral-300 leading-relaxed group/item"
                     >
                       <span className="text-primary font-label font-black mt-1 shrink-0 transition-transform group-hover/item:translate-x-1">
                         →
                       </span>
-                      <span className="group-hover/item:text-on-surface transition-colors duration-300">
+                      <span className="group-hover/item:text-white transition-colors duration-300">
                         {bullet}
                       </span>
                     </li>
@@ -85,9 +97,70 @@ export const EducationSection = () => (
           ))}
         </div>
       </div>
+
+      {/* ── Honors & Achievements ── */}
+      <div className="mt-32">
+        <div className="mb-16">
+          <h3 className="font-headline font-black text-4xl sm:text-5xl md:text-6xl tracking-tighter uppercase leading-none text-white">
+            Honors &amp; Hackathons
+          </h3>
+        </div>
+
+        <div className="relative">
+          <div className="absolute left-[135px] top-0 bottom-0 w-px bg-outline-variant hidden md:block" />
+
+          <div className="flex flex-col gap-12 md:gap-24">
+            {achievements.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                className="group flex flex-col md:flex-row relative"
+              >
+                <div className="md:w-[120px] md:shrink-0 mb-3 md:mb-0">
+                  <span className="font-label text-[11px] font-black tracking-widest text-outline uppercase">
+                    {item.dates}
+                  </span>
+                </div>
+
+                <div className="hidden md:flex absolute left-[135px] -translate-x-1/2 top-1.5 z-20 items-center justify-center">
+                  <div className="w-4 h-4 bg-black border-2 border-primary shadow-[3px_3px_0_0_var(--color-primary)] transition-all duration-300 group-hover:scale-125" />
+                </div>
+
+                <div className="md:pl-20 flex-1 min-w-0">
+                  <h3 className="font-headline font-black text-[clamp(28px,5vw,60px)] tracking-tighter uppercase leading-none mb-3 text-white group-hover:text-primary transition-colors duration-300">
+                    {item.degree}
+                  </h3>
+                  <p className="font-label text-[13px] font-black tracking-[0.2em] text-primary uppercase mb-8">
+                    {item.institution}
+                  </p>
+
+                  <ul className="space-y-4 w-full max-w-3xl">
+                    {item.bullets.map((bullet, j) => (
+                      <li
+                        key={j}
+                        className="flex gap-4 font-body text-[16px] text-neutral-300 leading-relaxed group/item"
+                      >
+                        <span className="text-primary font-label font-black mt-1 shrink-0 transition-transform group-hover/item:translate-x-1">
+                          →
+                        </span>
+                        <span className="group-hover/item:text-white transition-colors duration-300">
+                          {bullet}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
 
-    {/* Background Watermark 05 */}
+    {/* Background Watermark 06 */}
     <div className="absolute top-[40%] right-[-5%] leading-none select-none pointer-events-none z-0 overflow-hidden opacity-5">
       <span className="font-headline font-black text-[clamp(150px,35vw,600px)] text-primary transition-colors duration-700 block translate-x-[10%]">
         06

@@ -62,7 +62,7 @@ const projects = [
     technologies: ["Unity", "C#", "OOP", "ScriptableObjects"],
     year: "2025",
     id: "06",
-    href: "#",
+    href: "https://www.youtube.com/watch?v=1puGorRnhxo",
     thumbnail: "/projects/game-dev.png"
   }
 ];
@@ -88,9 +88,9 @@ export const WorksSection = () => {
   return (
     <section
       id="projects"
-      className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:px-24 py-24 overflow-hidden"
+      className="relative min-h-screen px-6 sm:px-20 md:px-32 lg:pr-24 lg:pl-[calc(5rem+6rem)] py-24 overflow-hidden"
     >
-      {/* Background Watermark 03 */}
+      {/* Background Watermark 02 */}
       <div className="absolute bottom-[-4%] right-[-5%] leading-none select-none pointer-events-none z-0 overflow-hidden opacity-5">
         <span className="font-headline font-black text-[clamp(250px,45vw,700px)] text-primary transition-colors duration-700 block translate-x-[15%]">
           02
@@ -130,7 +130,7 @@ export const WorksSection = () => {
         <motion.div
           layout
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         >
           <AnimatePresence mode="popLayout" initial={false}>
             {filteredProjects.map((project, i) => (
@@ -139,7 +139,15 @@ export const WorksSection = () => {
                 onClick={(e) => {
                   if (project.href && project.href !== "#") {
                     e.preventDefault();
-                    setPreviewUrl(project.href);
+                    if (
+                      project.href.includes("github.com") ||
+                      project.href.includes("youtube.com") ||
+                      project.href.includes("youtu.be")
+                    ) {
+                      window.open(project.href, "_blank", "noopener,noreferrer");
+                    } else {
+                      setPreviewUrl(project.href);
+                    }
                   }
                 }}
               >

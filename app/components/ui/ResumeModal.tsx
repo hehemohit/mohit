@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -26,13 +26,13 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             className="absolute inset-0 bg-black/90 backdrop-blur-md cursor-pointer"
           />
 
-          {/* Modal Container */}
+            {/* Modal Container */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ type: "spring", damping: 30, stiffness: 400 }}
-            className="relative w-full max-w-4xl max-h-[85vh] bg-black border border-white/10 overflow-hidden flex flex-col shadow-[0_0_100px_rgba(255,49,49,0.15)]"
+            className="relative w-full max-w-4xl h-[90vh] bg-black border border-white/10 overflow-hidden flex flex-col shadow-[0_0_100px_rgba(255,49,49,0.15)]"
             style={{ zIndex: 101 }}
           >
             {/* Modal Header */}
@@ -61,27 +61,26 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 </a>
                 <button
                   onClick={onClose}
-                  className="p-2.5 text-neutral-400 hover:text-white hover:bg-primary transition-all rounded-sm border border-transparent hover:border-primary group"
+                  className="p-2.5 text-neutral-400 hover:text-white hover:bg-primary transition-all rounded-sm border border-transparent hover:border-primary group cursor-pointer"
                 >
-                  <X size={20} className="group-rotate-90 transition-transform" />
+                  <X size={20} className="group-hover:rotate-90 transition-transform" />
                 </button>
               </div>
             </div>
 
-            {/* Viewer Stage (A4 or Square ratio as per request) */}
-            <div className="flex-1 overflow-auto bg-black p-6 sm:p-10 flex flex-col items-center gap-10 no-scrollbar">
-              <div className="relative w-full max-w-[min(90vw,75vh)] aspect-square bg-neutral-900 border border-white/5 shadow-2xl overflow-hidden group">
+            {/* Viewer Stage (Natural Document Ratio) */}
+            <div className="flex-1 overflow-auto bg-black p-4 sm:p-8 flex flex-col items-center gap-6 no-scrollbar">
+              <div className="relative w-full max-w-2xl flex-1 min-h-[60vh] bg-neutral-900 border border-white/10 shadow-2xl overflow-hidden group">
                 <iframe
                   src="https://drive.google.com/file/d/1TDBcqDduiIlJQHeEDacC26IsZyi0A4qT/preview"
                   className="w-full h-full border-none pointer-events-auto"
                 />
                 
-                {/* Floating "Open Fullscreen" hint - hidden since it's an iframe embed but shows aesthetics */}
-                <div className="absolute inset-0 pointer-events-none border-8 border-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 pointer-events-none border-4 border-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               
-              <div className="flex flex-col items-center gap-4 py-6">
-                <p className="font-label text-center text-[10px] tracking-[0.4em] uppercase text-neutral-600 font-black">
+              <div className="flex flex-col items-center gap-2 py-2">
+                <p className="font-label text-center text-[10px] tracking-[0.4em] uppercase text-neutral-500 font-black">
                   TECHNICAL_EXPERTISE / COMPUTER_ENGINEERING / FULL_STACK_DEV
                 </p>
                 <div className="h-px w-20 bg-primary/20" />
@@ -90,11 +89,11 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
 
             {/* Footer / Status bar */}
             <div className="px-6 py-2 bg-neutral-950 border-t border-white/5 flex items-center justify-between">
-              <span className="font-label text-[7px] text-neutral-700 uppercase tracking-widest">
-                VIEWING: MOHIT_JANGID_RESUME_.PDF [GOOGLE DRIVE]
+              <span className="font-label text-[7px] text-neutral-600 uppercase tracking-widest">
+                VIEWING: MOHIT_JANGID_RESUME.PDF [GOOGLE DRIVE]
               </span>
-              <span className="font-label text-[7px] text-neutral-700 uppercase tracking-widest">
-                READY_FOR_COLABORATION
+              <span className="font-label text-[7px] text-neutral-600 uppercase tracking-widest">
+                READY_FOR_COLLABORATION
               </span>
             </div>
           </motion.div>
