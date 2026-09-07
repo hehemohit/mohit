@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -28,7 +28,7 @@ const LinkedinIcon = ({ size = 18 }) => (
 const socials = [
     { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
     { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
-    { icon: FileText, label: "RESUME", href: "https://drive.google.com/file/d/1Cp8mJPKvvNucmX8GN4wT9i05cRtTuCdV/view?usp=sharing" },
+    { icon: FileText, label: "RESUME", href: "https://drive.google.com/file/d/1TDBcqDduiIlJQHeEDacC26IsZyi0A4qT/view?usp=sharing" },
 ];
 
 export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) => {
@@ -87,13 +87,13 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                 className="pointer-events-none select-none absolute bottom-[-10%] right-[-5%] leading-none z-0 overflow-hidden opacity-[0.07]"
             >
                 <span className="font-headline font-black text-[clamp(250px,45vw,700px)] text-primary transition-colors duration-700 block translate-x-[15%]">
-                    06
+                    07
                 </span>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto w-full">
 
-                {/* ── Section label ── */}
+                {/* â”€â”€ Section label â”€â”€ */}
                 <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -101,13 +101,13 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                     transition={{ duration: 0.5 }}
                     className="font-label text-[10px] tracking-[0.3em] uppercase text-neutral-600 mb-4"
                 >
-                    06 / CONTACT
+                    07 / CONTACT
                 </motion.p>
 
-                {/* ── Main grid ── */}
+                {/* â”€â”€ Main grid â”€â”€ */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20 items-start">
 
-                    {/* LEFT — heading, copy, socials */}
+                    {/* LEFT â€” heading, copy, socials */}
                     <div className="lg:col-span-5">
                         <motion.h2
                             initial={{ opacity: 0, x: -24 }}
@@ -128,7 +128,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                             className="font-body text-sm sm:text-base text-neutral-400 leading-relaxed mb-8 max-w-sm"
                         >
                             Whether you have a specific project in mind or just want to explore a
-                            potential collaboration — I&apos;m ready to build something exceptional.
+                            potential collaboration â€” I&apos;m ready to build something exceptional.
                         </motion.p>
 
                         {/* Social cards */}
@@ -183,7 +183,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                         </motion.p>
                     </div>
 
-                    {/* RIGHT — contact form */}
+                    {/* RIGHT â€” contact form */}
                     <motion.div
                         initial={{ opacity: 0, y: 24 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -193,7 +193,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                                    p-6 sm:p-8 md:p-10"
                     >
                         {submitted ? (
-                            /* ── Success state ── */
+                            /* â”€â”€ Success state â”€â”€ */
                             <div className="flex flex-col items-center justify-center text-center py-16 gap-4">
                                 <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center">
                                     <CheckCircle size={28} className="text-black" />
@@ -214,7 +214,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                                 </button>
                             </div>
                         ) : (
-                            /* ── Form ── */
+                            /* â”€â”€ Form â”€â”€ */
                             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
 
                                 {/* Name */}
@@ -279,7 +279,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                                         className="flex items-center gap-2 text-primary text-xs font-label tracking-wide"
                                     >
                                         <AlertCircle size={14} />
-                                        Transmission failed — please try again or email directly.
+                                        Transmission failed â€” please try again or email directly.
                                     </motion.div>
                                 )}
 
@@ -294,7 +294,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                                                hover:shadow-[6px_6px_0_0_#fff]
                                                disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-x-0 disabled:hover:translate-y-0 disabled:hover:shadow-none"
                                 >
-                                    {isSubmitting ? "TRANSMITTING..." : "SEND_MESSAGE →"}
+                                    {isSubmitting ? "TRANSMITTING..." : "SEND_MESSAGE â†’"}
                                 </button>
                             </form>
                         )}
@@ -302,7 +302,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                 </div>
             </div>
 
-            {/* ── Footer ── */}
+            {/* â”€â”€ Footer â”€â”€ */}
             <div className="relative z-10 max-w-7xl mx-auto mt-24 sm:mt-32 pt-8 border-t border-neutral-900
                             flex flex-col sm:flex-row justify-between items-center gap-6">
                 <div className="flex flex-col items-center sm:items-start gap-0.5">
@@ -310,7 +310,7 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                         MOHIT JANGID
                     </span>
                     <span className="font-label text-[9px] text-neutral-400 uppercase tracking-[0.35em]">
-                        © 2026 MOHIT JANGID
+                        Â© 2026 MOHIT JANGID
                     </span>
                 </div>
                 <p className="font-label text-[9px] text-neutral-400 uppercase tracking-[0.2em] hidden sm:block font-bold">
@@ -325,3 +325,4 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
         </section>
     );
 }
+

@@ -90,7 +90,7 @@ export const EducationSection = () => (
     {/* Background Watermark 05 */}
     <div className="absolute top-[40%] right-[-5%] leading-none select-none pointer-events-none z-0 overflow-hidden opacity-5">
       <span className="font-headline font-black text-[clamp(150px,35vw,600px)] text-primary transition-colors duration-700 block translate-x-[10%]">
-        05
+        06
       </span>
     </div>
   </section>

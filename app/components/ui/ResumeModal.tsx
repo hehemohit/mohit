@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -51,7 +51,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
 
               <div className="flex items-center gap-3">
                 <a
-                  href="https://drive.google.com/file/d/1Cp8mJPKvvNucmX8GN4wT9i05cRtTuCdV/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1TDBcqDduiIlJQHeEDacC26IsZyi0A4qT/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 text-neutral-400 hover:text-primary hover:bg-white/5 transition-all rounded-sm border border-transparent hover:border-white/10 group"
@@ -72,7 +72,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             <div className="flex-1 overflow-auto bg-black p-6 sm:p-10 flex flex-col items-center gap-10 no-scrollbar">
               <div className="relative w-full max-w-[min(90vw,75vh)] aspect-square bg-neutral-900 border border-white/5 shadow-2xl overflow-hidden group">
                 <iframe
-                  src="https://drive.google.com/file/d/1Cp8mJPKvvNucmX8GN4wT9i05cRtTuCdV/preview"
+                  src="https://drive.google.com/file/d/1TDBcqDduiIlJQHeEDacC26IsZyi0A4qT/preview"
                   className="w-full h-full border-none pointer-events-auto"
                 />
                 
@@ -103,3 +103,4 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
     </AnimatePresence>
   );
 };
+

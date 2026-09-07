@@ -9,6 +9,7 @@ import { WorksSection } from "./components/sections/WorksSection";
 import { ExperienceSection } from "./components/sections/ExperienceSection";
 import { EducationSection } from "./components/sections/EducationSection";
 import { SkillsSection } from "./components/sections/SkillsSection";
+import { LeetCodeSection } from "./components/sections/LeetCodeSection";
 import { ContactSection } from "./components/sections/ContactSection";
 import { ResumeModal } from "./components/ui/ResumeModal";
 
@@ -26,6 +27,7 @@ export default function Home() {
       <WorksSection />
       <ExperienceSection />
       <SkillsSection />
+      <LeetCodeSection />
       <EducationSection />
 
       <ContactSection onOpenResume={() => setIsResumeOpen(true)} />

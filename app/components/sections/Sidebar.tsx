@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,6 +9,7 @@ const sections = [
     { id: "projects", label: "PROJECTS" },
     { id: "experience", label: "EXPERIENCE" },
     { id: "skills", label: "SKILLS" },
+    { id: "leetcode", label: "LEETCODE" },
     { id: "education", label: "EDUCATION" },
     { id: "contact", label: "CONTACT" },
 ];
@@ -189,7 +190,7 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
                     {[
                         { icon: GithubIcon, label: "GITHUB", href: "https://github.com/hehemohit" },
                         { icon: LinkedinIcon, label: "LINKEDIN", href: "https://www.linkedin.com/in/mohit-jangid-a54762346/" },
-                        { icon: FileTextIcon, label: "RESUME", href: "https://drive.google.com/file/d/1Cp8mJPKvvNucmX8GN4wT9i05cRtTuCdV/view?usp=sharing" },
+                        { icon: FileTextIcon, label: "RESUME", href: "https://drive.google.com/file/d/1TDBcqDduiIlJQHeEDacC26IsZyi0A4qT/view?usp=sharing" },
                         { icon: TwitterIcon, label: "X / TWITTER", href: "#" },
                     ].map(({ href, icon: Icon, label }) => (
                         <a
@@ -301,3 +302,4 @@ export const Sidebar = ({ onOpenResume }: { onOpenResume: () => void }) => {
         </>
     );
 };
+

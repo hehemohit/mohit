@@ -12,7 +12,7 @@ const projects = [
     technologies: ["Android / Kotlin", "Wi-Fi Direct & BLE", "Curve25519 / AES-256-GCM", "P2P Sockets", "Distributed Systems"],
     year: "2025",
     id: "01",
-    href: "#",
+    href: "https://github.com/hehemohit/zerogrid",
     thumbnail: "/projects/zerogrid.jpg"
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     technologies: ["LangGraph & Agentic AI", "Supervisor-Worker Pattern", "SSE & Streaming APIs", "Android Health Connect", "Zustand / TanStack Query"],
     year: "2025",
     id: "02",
-    href: "#",
+    href: "https://github.com/hehemohit/FitMatrix",
     thumbnail: "/projects/fitmatrix.jpg"
   },
   {
