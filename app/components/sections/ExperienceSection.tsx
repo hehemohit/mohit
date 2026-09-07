@@ -106,66 +106,69 @@ export const ExperienceSection = () => (
       </div>
 
       {/* ── Positions of Responsibility ── */}
-      <div className="mt-32 relative">
-        {/* Header */}
+      <div className="mt-32">
+        {/* Header — sits OUTSIDE the relative container so the line never overlaps it */}
         <div className="mb-16">
           <h3 className="font-headline font-black text-4xl sm:text-5xl md:text-6xl tracking-tighter uppercase leading-none text-white">
             Leadership &amp; Responsibility
           </h3>
         </div>
 
-        {/* Vertical line */}
-        <div className="absolute left-[135px] top-4 bottom-0 w-px bg-outline-variant hidden md:block" />
+        {/* Timeline entries — own relative wrapper so the line only spans entries */}
+        <div className="relative">
+          {/* Vertical line — starts at top-0 of entries, not the heading */}
+          <div className="absolute left-[135px] top-0 bottom-0 w-px bg-outline-variant hidden md:block" />
 
-        <div className="flex flex-col gap-12 md:gap-24">
-          {responsibilities.map((resp, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="group flex flex-col md:flex-row relative"
-            >
-              {/* Left side: Role info label */}
-              <div className="md:w-[120px] md:shrink-0 mb-3 md:mb-0">
-                <span className="font-label text-[11px] font-black tracking-widest text-outline uppercase">
-                  Leadership
-                </span>
-              </div>
+          <div className="flex flex-col gap-12 md:gap-24">
+            {responsibilities.map((resp, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+                className="group flex flex-col md:flex-row relative"
+              >
+                {/* Left side: Role info label */}
+                <div className="md:w-[120px] md:shrink-0 mb-3 md:mb-0">
+                  <span className="font-label text-[11px] font-black tracking-widest text-outline uppercase">
+                    Leadership
+                  </span>
+                </div>
 
-              {/* Timeline Node */}
-              <div className="hidden md:flex absolute left-[135px] -translate-x-1/2 top-1.5 z-20 items-center justify-center">
-                <div className="w-4 h-4 bg-black border-2 border-primary shadow-[3px_3px_0_0_var(--color-primary)] transition-all duration-300 group-hover:scale-125" />
-              </div>
+                {/* Timeline Node */}
+                <div className="hidden md:flex absolute left-[135px] -translate-x-1/2 top-1.5 z-20 items-center justify-center">
+                  <div className="w-4 h-4 bg-black border-2 border-primary shadow-[3px_3px_0_0_var(--color-primary)] transition-all duration-300 group-hover:scale-125" />
+                </div>
 
-              {/* Right side: Content */}
-              <div className="md:pl-20 flex-1 min-w-0">
-                <h3 className="font-headline font-black text-[clamp(28px,5vw,60px)] tracking-tighter uppercase leading-none mb-3 text-white group-hover:text-primary transition-colors duration-300">
-                  {resp.role}
-                </h3>
-                <p className="font-label text-[13px] font-black tracking-[0.2em] text-primary uppercase mb-8">
-                  {resp.organization}
-                </p>
+                {/* Right side: Content */}
+                <div className="md:pl-20 flex-1 min-w-0">
+                  <h3 className="font-headline font-black text-[clamp(28px,5vw,60px)] tracking-tighter uppercase leading-none mb-3 text-white group-hover:text-primary transition-colors duration-300">
+                    {resp.role}
+                  </h3>
+                  <p className="font-label text-[13px] font-black tracking-[0.2em] text-primary uppercase mb-8">
+                    {resp.organization}
+                  </p>
 
-                <ul className="space-y-4 w-full max-w-3xl">
-                  {resp.bullets.map((bullet, j) => (
-                    <li
-                      key={j}
-                      className="flex gap-4 font-body text-[16px] text-on-surface-variant leading-relaxed group/item"
-                    >
-                      <span className="text-primary font-label font-black mt-1 shrink-0 transition-transform group-hover/item:translate-x-1">
-                        →
-                      </span>
-                      <span className="group-hover/item:text-on-surface transition-colors duration-300">
-                        {bullet}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
+                  <ul className="space-y-4 w-full max-w-3xl">
+                    {resp.bullets.map((bullet, j) => (
+                      <li
+                        key={j}
+                        className="flex gap-4 font-body text-[16px] text-on-surface-variant leading-relaxed group/item"
+                      >
+                        <span className="text-primary font-label font-black mt-1 shrink-0 transition-transform group-hover/item:translate-x-1">
+                          →
+                        </span>
+                        <span className="group-hover/item:text-on-surface transition-colors duration-300">
+                          {bullet}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
