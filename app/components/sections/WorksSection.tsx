@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const categories = ["ALL PROJECTS", "AGENTIC AI & SYSTEMS", "BACKEND & PROTOCOLS", "FULL STACK & WEB"];
+const categories = ["ALL PROJECTS", "AGENTIC AI & SYSTEMS", "BACKEND & PROTOCOLS", "FULL STACK & WEB", "GAME DEV"];
 
 const projects = [
   {
@@ -54,6 +54,16 @@ const projects = [
     id: "05",
     href: "https://www.parcos.com/",
     thumbnail: "/projects/parcos.png"
+  },
+  {
+    title: "Game Dev Framework",
+    category: "GAME DEV",
+    description: "A scalable First-Person Shooter (FPS) framework built in Unity that reduces weapon implementation time by 50% using modular C# architecture, interface-based polymorphism, and ScriptableObjects for decoupled weapon configuration.",
+    technologies: ["Unity", "C#", "OOP", "ScriptableObjects"],
+    year: "2025",
+    id: "06",
+    href: "#",
+    thumbnail: "/projects/game-dev.png"
   }
 ];
 

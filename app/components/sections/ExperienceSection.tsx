@@ -18,11 +18,19 @@ const experiences = [
 
 const responsibilities = [
   {
-    role: "Sports Head & Event Head",
-    organization: "Students' Council & AURORA Fest (Yearly fest of UCOE)",
+    role: "Sports Head",
+    organization: "Students' Council",
     bullets: [
-      "Led the organization of the annual Sports Fest as Sports Head for the Students' Council, managing a core team for an event of over 1,000 students; represented the college in intercollegiate tournaments, securing 1st position and earning 8 medals across events including ICT Volleyball.",
-      "As Event Head for AURORA Fest, built a dynamic real-time points table and leaderboard system that replaced all manual tracking — resulting in zero scheduling delays and a smooth, highly structured tournament flow."
+      "Led the organization of the annual Sports Fest, managing a core team for an event of over 1,000 students.",
+      "Represented the college in intercollegiate tournaments, securing 1st position and earning 8 medals across events including ICT Volleyball."
+    ]
+  },
+  {
+    role: "Event Head",
+    organization: "AURORA Fest (Yearly fest of UCOE)",
+    bullets: [
+      "Built a dynamic real-time points table and leaderboard system that replaced all manual tracking — resulting in zero scheduling delays and a smooth, highly structured tournament flow.",
+      "Mitigated operational bottlenecks by leveraging technical solutions to streamline score-tracking and keep participants and coordinators synchronized throughout the event."
     ]
   }
 ];
