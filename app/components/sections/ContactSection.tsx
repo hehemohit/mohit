@@ -172,22 +172,36 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                             ))}
                         </div>
 
-                        {/* Direct email line */}
-                        <motion.p
+                        {/* Direct contact info */}
+                        <motion.div
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.5 }}
-                            className="mt-6 font-label text-[10px] tracking-[0.15em] text-neutral-400"
+                            className="mt-6 space-y-2 font-label text-[10px] tracking-[0.15em] text-neutral-400"
                         >
-                            OR EMAIL DIRECTLY:{" "}
-                            <a
-                                href="mailto:mohit.jangid2805@gmail.com"
-                                className="text-white hover:text-primary transition-colors underline underline-offset-4"
-                            >
-                                mohit.jangid2805@gmail.com
-                            </a>
-                        </motion.p>
+                            <p>
+                                EMAIL:{" "}
+                                <a
+                                    href="mailto:mohit.jangid2805@gmail.com"
+                                    className="text-white hover:text-primary transition-colors underline underline-offset-4"
+                                >
+                                    mohit.jangid2805@gmail.com
+                                </a>
+                            </p>
+                            <p>
+                                PHONE:{" "}
+                                <a
+                                    href="tel:+918459367927"
+                                    className="text-white hover:text-primary transition-colors underline underline-offset-4"
+                                >
+                                    +91-8459367927
+                                </a>
+                            </p>
+                            <p>
+                                LOCATION: <span className="text-white font-bold">MUMBAI, INDIA</span>
+                            </p>
+                        </motion.div>
                     </div>
 
                     {/* RIGHT â€” contact form */}
@@ -323,10 +337,11 @@ export const ContactSection = ({ onOpenResume }: { onOpenResume: () => void }) =
                 <p className="font-label text-[9px] text-neutral-400 uppercase tracking-[0.2em] hidden sm:block font-bold">
                     DESIGNED &amp; BUILT WITH PRECISION
                 </p>
-                <div className="flex gap-8 font-label text-[9px] font-black tracking-[0.2em] text-neutral-400">
+                <div className="flex flex-wrap gap-6 sm:gap-8 font-label text-[9px] font-black tracking-[0.2em] text-neutral-400">
                     <a href="https://github.com/hehemohit" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GITHUB</a>
                     <a href="https://www.linkedin.com/in/mohit-jangid-a54762346/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">LINKEDIN</a>
                     <a href="mailto:mohit.jangid2805@gmail.com" className="hover:text-primary transition-colors">EMAIL</a>
+                    <a href="tel:+918459367927" className="hover:text-primary transition-colors">PHONE</a>
                 </div>
             </div>
         </section>

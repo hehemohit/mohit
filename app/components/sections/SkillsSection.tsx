@@ -5,23 +5,27 @@ import { motion } from 'framer-motion';
 const skillCategories = [
   {
     label: "LANGUAGES",
-    skills: ["Java", "Python", "TypeScript", "JavaScript", "SQL", "Kotlin", "C#"]
+    skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL", "Kotlin", "C#"]
   },
   {
-    label: "BACKEND & ARCHITECTURE",
-    skills: ["Spring Boot", "Node.js", "Express.js", "RESTful APIs", "Server-Sent Events (SSE)", "PostgreSQL", "Redis", "MongoDB", "SQLite"]
+    label: "FRAMEWORKS & LIBRARIES",
+    skills: ["React", "Node.js", "Express.js", "Next.js", "Spring Boot", "React Native", "LangGraph", "Zustand", "TanStack Query", "Tailwind CSS"]
   },
   {
-    label: "AGENTIC AI & ORCHESTRATION",
-    skills: ["LangGraph", "Multi-Agent Orchestration", "Supervisor-Worker Pattern", "LLM Contextual Reasoning", "Blackboard State Pattern", "Gemini API", "Prompt Engineering"]
+    label: "DATABASES & STORAGE",
+    skills: ["PostgreSQL", "MongoDB", "Redis", "DynamoDB", "SQLite", "Google Cloud Storage (GCS)"]
+  },
+  {
+    label: "CLOUD & AI INFRASTRUCTURE",
+    skills: ["AWS (ECS Fargate, Lambda, Bedrock)", "API Gateway", "Cognito", "ElastiCache Redis", "Strands Agents SDK", "Google Cloud Platform (GCP)", "Gemini API", "Prompt Engineering"]
   },
   {
     label: "PLATFORMS & DEVELOPER TOOLS",
-    skills: ["Docker", "Linux", "Google Cloud Platform (GCP)", "Google Cloud Storage (GCS)", "Git", "Unity", "Magento", "Kali / Ubuntu / Arch"]
+    skills: ["Git", "GitHub Actions", "Docker", "Kubernetes", "Linux (Ubuntu / Arch / Kali)", "Unity", "Magento"]
   },
   {
-    label: "FRONTEND & MOBILE",
-    skills: ["React", "Next.js", "React Native", "Zustand", "TanStack Query", "Android Health Connect API", "Tailwind CSS"]
+    label: "APIS & ARCHITECTURE",
+    skills: ["REST APIs", "Socket.IO", "Server-Sent Events (SSE)", "Android Health Connect", "Multi-Agent Orchestration", "Supervisor-Worker Pattern", "LLM Contextual Reasoning", "Blackboard State Pattern"]
   }
 ];
 
@@ -43,7 +47,7 @@ function CategoryBlock({ category, index }: { category: any; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="border border-primary/20 bg-surface-variant p-6 sm:p-8 flex flex-col justify-between hover:border-primary/40 transition-colors duration-300 shadow-[0_0_35px_rgba(255,49,49,0.03)]"
+      className="border border-primary/20 bg-surface-variant p-6 sm:p-8 flex flex-col justify-between hover:border-primary/40 transition-colors duration-300 shadow-[0_0_35px_rgba(255,49,49,0.03)] h-full"
     >
       <div className="flex items-center gap-3 mb-6 pb-3 border-b border-primary/10">
         <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -73,9 +77,9 @@ export const SkillsSection = () => (
       </div>
   
       {/* Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-7xl mx-auto w-full relative z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto w-full relative z-10">
         {skillCategories.map((cat, i) => (
-          <div key={cat.label} className={i === 4 ? "sm:col-span-2" : ""}>
+          <div key={cat.label}>
             <CategoryBlock category={cat} index={i} />
           </div>
         ))}

@@ -9,7 +9,7 @@ const education = [
     degree: "Bachelor of Engineering (B.E.) in Computer Engineering",
     institution: "Universal College of Engineering (University of Mumbai)",
     bullets: [
-      "Current CGPA: 8.35 / 10",
+      "Current CGPA: 8.35 / 10 (Graduation: May 2027)",
       "Focus Areas: Distributed Systems, Scalable Backend Services, and Autonomous Agentic AI Architectures.",
       "Core Coursework: Data Structures & Algorithms, Software Engineering (SWE), Database Management Systems, Object-Oriented Programming (Java)."
     ]
@@ -24,6 +24,15 @@ const achievements = [
     bullets: [
       "Architected and deployed EduAble — an AI accessibility engine integrating WhatsApp Business Bot with sub-2s response latency.",
       "Implemented MERN stack with TypeScript, Google Cloud Storage pipelines, and Meta Graph API webhook automation."
+    ]
+  },
+  {
+    dates: "2025",
+    degree: "Bharat Builds Hackathon — ZeroGrid",
+    institution: "National Hackathon",
+    bullets: [
+      "Engineered an offline mesh & agentic emergency response platform on Android (Kotlin/Compose) over Wi-Fi Direct & BLE with multi-hop relay up to 8 hops (<5% packet drop).",
+      "Automated AWS (ECS Fargate, Bedrock, Strands Agents SDK) 4-phase multi-agent flood triage with Redis locks and DynamoDB isolation."
     ]
   }
 ];

@@ -8,6 +8,8 @@ export const Footer = () => (
       <div className="flex flex-col md:flex-row gap-8 mb-16 relative z-10">
         <a className="text-on-surface font-body uppercase tracking-[0.1em] text-xs hover:underline decoration-primary underline-offset-8 transition-all" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mohit-jangid-a54762346/">LinkedIn</a>
         <a className="text-on-surface font-body uppercase tracking-[0.1em] text-xs hover:underline decoration-primary underline-offset-8 transition-all" target="_blank" rel="noopener noreferrer" href="https://github.com/hehemohit">GitHub</a>
+        <a className="text-on-surface font-body uppercase tracking-[0.1em] text-xs hover:underline decoration-primary underline-offset-8 transition-all" href="mailto:mohit.jangid2805@gmail.com">Email</a>
+        <a className="text-on-surface font-body uppercase tracking-[0.1em] text-xs hover:underline decoration-primary underline-offset-8 transition-all" href="tel:+918459367927">Phone</a>
         <a className="text-on-surface font-body uppercase tracking-[0.1em] text-xs hover:underline decoration-primary underline-offset-8 transition-all" target="_blank" rel="noopener noreferrer" href="#">X / Twitter</a>
       </div>
       <div className="flex flex-wrap justify-center gap-12 mb-20 relative z-10 font-label text-xs uppercase tracking-widest opacity-60">

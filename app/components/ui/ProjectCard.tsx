@@ -18,6 +18,7 @@ export interface Project {
     year: string;
     thumbnail?: string;
     href?: string;
+    githubUrl?: string;
     technologies?: string[];
     id?: string;
 }
@@ -70,14 +71,25 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     </span>
                 </div>
 
-                {/* Link Type Indicator */}
-                {hasLink && (
-                    <div className="absolute top-4 right-4 z-10 opacity-80 group-hover:opacity-100 transition-opacity">
+                {/* Link Type Indicators */}
+                <div className="absolute top-4 right-4 z-10 opacity-80 group-hover:opacity-100 transition-opacity flex items-center gap-1.5">
+                    {project.githubUrl && (
+                        <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-[9px] font-black uppercase tracking-widest px-2.5 py-1 bg-black/80 backdrop-blur-sm border border-primary/40 text-primary hover:bg-primary hover:text-black flex items-center gap-1.5 font-label transition-colors"
+                        >
+                            <GithubIcon size={11} /> REPO
+                        </a>
+                    )}
+                    {hasLink && (
                         <span className="text-[9px] font-black uppercase tracking-widest px-2.5 py-1 bg-black/80 backdrop-blur-sm border border-primary/40 text-primary flex items-center gap-1.5 font-label">
                             {isGithub ? <><GithubIcon size={11} /> REPO</> : isYoutube ? <><Play size={10} className="fill-primary" /> VIDEO</> : <><Globe size={11} /> LIVE</>}
                         </span>
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
 
             {/* Content Body */}
@@ -107,6 +119,18 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                         {project.year}
                     </span>
                     <div className="flex items-center gap-2">
+                        {project.githubUrl && (
+                            <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
+                                className="inline-flex items-center gap-1 px-2.5 py-1 border border-primary/30 bg-black/60 hover:bg-primary hover:text-black text-neutral-300 font-label text-[9px] font-black uppercase tracking-wider transition-all"
+                                title="Open GitHub Repository"
+                            >
+                                <GithubIcon size={11} /> REPO
+                            </a>
+                        )}
                         <span className="font-label text-[9px] font-black tracking-widest uppercase text-neutral-400 group-hover:text-primary transition-colors">
                             {isGithub ? "OPEN GITHUB" : isYoutube ? "WATCH VIDEO" : hasLink ? "VIEW DEMO" : "INTERNAL"}
                         </span>

@@ -6,12 +6,12 @@ const experiences = [
   {
     dates: "AUG 2025 - JAN 2026",
     role: "Developer Intern",
-    company: "DigitalVigyapan",
+    company: "DigitalVigyapan, Borivali",
     bullets: [
-      "Architected an agentic multi-stage pipeline that ingested raw video scripts to autonomously generate SEO-optimized titles, video descriptions, and contextual product recommendations; then implemented a multi-agent feedback loop that cross-analyzed post-publish analytics (retention, CTR, drop-offs) to autonomously generate actionable optimization briefs — eliminating manual editorial review cycles.",
-      "Engineered a custom internal automation suite using React, Node.js, and MongoDB with strict schema validation, reducing data fault rates by 70% and accelerating team publishing throughput by 15%.",
-      "Built a centralized CMS on GCP integrating YouTube Data, Meta Graph, and LinkedIn APIs for multi-channel automated publishing — saving 10+ manual hours weekly and expanding engagement reach by 25%.",
-      "Refactored Magento frontend architecture for Parcos with responsive design optimizations on Linux deployment pipelines, driving a 23.6% lift in mobile conversions; also experienced in basic penetration testing."
+      "Architected an agentic multi-stage pipeline that turned raw video scripts into SEO-optimized titles, descriptions and e-commerce product recommendations, plus a multi-agent feedback loop where agents cross-analyze post-publish analytics (retention, click-through, drop-offs) to generate optimization briefs and debriefs for the marketing team.",
+      "Engineered a custom internal automation suite using React, Node.js, and MongoDB; enforced strict schema validation, reducing data fault rates by 70% and accelerating team publishing throughput by 15%.",
+      "Built a centralized CMS on GCP integrating YouTube Data, Meta Graph, and LinkedIn APIs to automate multi-channel publishing, saving 10+ manual hours weekly and expanding reach by 25%.",
+      "Refactored Magento frontend architecture for client site Parcos to implement responsive design, cutting mobile load times and driving a 23.6% lift in mobile conversions across Linux deployment pipelines."
     ]
   }
 ];
@@ -19,11 +19,11 @@ const experiences = [
 const responsibilities = [
   {
     role: "Sports Head",
-    organization: "Students' Council",
+    organization: "Students' Council & AURORA Fest (Yearly fest of UCOE)",
     tenure: "2024 - 2025",
     bullets: [
       "Led the organization of the annual Sports Fest, managing a core team for an event of over 1,000 students.",
-      "Represented the college in intercollegiate tournaments, securing 1st position and earning 8 medals across events including ICT Volleyball."
+      "Represented the college in intercollegiate tournaments, securing 1st position and earning 8 medals across events including Volleyball."
     ]
   },
   {
